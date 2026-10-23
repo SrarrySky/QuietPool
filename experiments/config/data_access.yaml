@@ -1,0 +1,11 @@
+provider: Pinax
+chain_id: 56
+mode: offline_parquet_import
+endpoint: https://parquet.riv-dev1.pinax.io
+bucket: bsc
+tables: [logs, transactions, blocks]
+import_config: pinax.example.yaml
+public_demo: true
+archive_coverage_guaranteed: false
+automatic_rpc_fallback: false
+download_policy: explicit_files_only_after_size_and_snapshot_review

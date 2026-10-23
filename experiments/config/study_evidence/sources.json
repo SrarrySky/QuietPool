@@ -1,0 +1,11 @@
+{
+  "observed_at_utc": "2026-10-21T14:39:48Z",
+  "tokenlist_url": "https://tokens.pancakeswap.finance/pancakeswap-extended.json",
+  "tokenlist_sha256": "ae9d0a75c56e17a5eda7b5437268fd612ecc7e09f3e1064bc8bd72d2183770b6",
+  "dex_url_template": "https://api.dexscreener.com/latest/dex/pairs/bsc/{up_to_30_addresses}",
+  "dex_response_sha256": "77e51cb9ade117439dfceb310edae757fa6ef64d9600dc9fa69787cfe51fc55c",
+  "discovery_sha256": "6249a713cd76a7fcecd0e0ee339a1355fd867632760b9082c82ee1dfa08e3e6d",
+  "candidates": 505,
+  "selection_count": 36,
+  "note": "Metadata discovery only, not historical qualification. All returned derived pair addresses were retained in discovery.csv."
+}

@@ -1,0 +1,48 @@
+name: Bug report
+description: Report a defect in the harness, importer, or CLI.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Reproducibility matters: include the exact
+        command, environment, and any hashes so we can reconstruct the run.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Commit SHA or `redteam` version.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Description
+      description: What happened and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Exact commands and configuration.
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Python version, and dependency versions.
+      placeholder: "Python 3.12.3, Linux, numpy 2.x"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and hashes
+      description: Relevant tracebacks, `INCOMPLETE.json`, or manifest hashes.
+    validations:
+      required: false

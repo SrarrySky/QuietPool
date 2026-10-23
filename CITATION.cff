@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+type: software
+title: 'Indicators as Constraints: Offline AMM Surveillance Experiments'
+message: 'Please cite the software version and commit used. The associated manuscript is a draft; add its final bibliographic reference when available.'
+authors:
+  - name: 'Indicators as Constraints contributors'
+version: 0.1.0
+date-released: 2026-10-21
+url: 'https://github.com/SrarrySky/QuietPool'
+repository-code: 'https://github.com/SrarrySky/QuietPool'
+license: MIT

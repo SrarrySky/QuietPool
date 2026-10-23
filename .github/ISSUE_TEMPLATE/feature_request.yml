@@ -1,0 +1,38 @@
+name: Feature request
+description: Propose a new capability or analysis.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        New capabilities should not weaken the reproducibility guarantees.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What gap or limitation motivates this request?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should be added, and how it fits the existing design?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Other approaches you considered.
+    validations:
+      required: false
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Constraints
+      options:
+        - label: Preserves offline execution
+        - label: Keeps deterministic, seed-42 reproducibility
+        - label: Does not touch the frozen vendor subset or preregistered config

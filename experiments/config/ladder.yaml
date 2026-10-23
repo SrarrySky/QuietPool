@@ -1,0 +1,7 @@
+wallets: 5
+funding: {fixed_amount: 10000, min_amount: 5000, max_amount: 15000}
+participation_bps: [500, 1000, 2000, 5000]
+guard_seconds: [60, 300]
+inventory_bands: [[500, 1500], [1000, 3000], [3000, 9000], [10000, 30000]]
+# Author confirmed: M7 is the S1 inventory sweep branching from M5 at 10%.
+m7_definition: S1_inventory_band_sweep_from_M5

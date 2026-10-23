@@ -1,0 +1,26 @@
+# Replace nulls with preregistered metadata. Paths are relative to this YAML.
+chain_id: 56
+snapshot: null  # Provider export version/date and complete-export assertion.
+metadata_source: null  # Archived pair/token metadata source, including decimals.
+pair: null
+token0: null
+token1: null
+decimals0: 18
+decimals1: 18
+quote_index: 0
+coverage_start: null  # At/before the last Sync before start_block.
+start_block: null
+end_block: null
+files:
+  blocks: [../../data/pinax/blocks.parquet]
+  transactions: [../../data/pinax/transactions.parquet]
+  logs: [../../data/pinax/logs.parquet]
+assume_usdt_usd: false
+quote_prices: null  # Optional local CSV: ts (UTC epoch seconds), quote_usd.
+price_max_age_seconds: 60
+max_input_rows: 2000000
+max_input_bytes: 2147483648
+resources:
+  memory_mb: 2048
+  disk_mb: 512
+  wall_seconds: 600

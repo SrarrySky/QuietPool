@@ -1,0 +1,3217 @@
+{
+  "endpoint": "https://parquet.riv-dev1.pinax.io",
+  "bucket": "bsc",
+  "observed_at_utc": "2026-10-21T14:39:48Z",
+  "tables": {
+    "blocks": {
+      "checkpoint_version": 13533,
+      "checkpoint_sha256": "61727a81f6c87eb0631f79b01d090bbb330c05f97922399800b1de3343f69028",
+      "active_files": [
+        {
+          "path": "date=2026-10-14/part-00000-9d8a492b-8707-4d12-85a0-4eb23e2a41ac-c000.zstd.parquet",
+          "bytes": 144732452,
+          "stats": {
+            "numRecords": 191929,
+            "minValues": {
+              "block_num": 127494946,
+              "timestamp": "2026-10-14T00:00:00Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T23:59:59Z",
+              "block_num": 127686874
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-def315a0-7f89-4185-b475-6b444f8a41f1-c000.zstd.parquet",
+          "bytes": 144424281,
+          "stats": {
+            "numRecords": 191917,
+            "minValues": {
+              "block_num": 127303029,
+              "timestamp": "2026-10-13T00:00:00Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T23:59:59Z",
+              "block_num": 127494945
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-3364d1eb-6323-47c4-b4a9-85bf3e10f79b-c000.zstd.parquet",
+          "bytes": 144294827,
+          "stats": {
+            "numRecords": 191400,
+            "minValues": {
+              "timestamp": "2026-10-12T00:00:00Z",
+              "block_num": 127111629
+            },
+            "maxValues": {
+              "block_num": 127303028,
+              "timestamp": "2026-10-12T23:59:59Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-bdd7da0a-d4d4-47f4-8c6f-ca45a742348d-c000.zstd.parquet",
+          "bytes": 144449165,
+          "stats": {
+            "numRecords": 191671,
+            "minValues": {
+              "timestamp": "2026-10-11T00:00:00Z",
+              "block_num": 126919958
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T23:59:59Z",
+              "block_num": 127111628
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-31c56938-1dad-4b6a-8bc2-75a9f494be10-c000.zstd.parquet",
+          "bytes": 144784972,
+          "stats": {
+            "numRecords": 191927,
+            "minValues": {
+              "block_num": 126728031,
+              "timestamp": "2026-10-10T00:00:00Z"
+            },
+            "maxValues": {
+              "block_num": 126919957,
+              "timestamp": "2026-10-10T23:59:59Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        }
+      ]
+    },
+    "logs": {
+      "checkpoint_version": 13535,
+      "checkpoint_sha256": "8a458d95bb7c221db2c2274afbfa61bd17c8b3856ae2e0906ccd1a794ded6a7d",
+      "active_files": [
+        {
+          "path": "date=2026-10-14/part-00000-84913835-bb64-4082-8bf9-c938c6835abb-c000.zstd.parquet",
+          "bytes": 265421981,
+          "stats": {
+            "numRecords": 8044958,
+            "minValues": {
+              "block_num": 127494946,
+              "timestamp": "2026-10-14T00:00:00Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T01:52:38Z",
+              "block_num": 127509961
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-24f3e77c-c1c8-4945-8df3-64c7de07514f-c000.zstd.parquet",
+          "bytes": 255644760,
+          "stats": {
+            "numRecords": 7920427,
+            "minValues": {
+              "block_num": 127509962,
+              "timestamp": "2026-10-14T01:52:39Z"
+            },
+            "maxValues": {
+              "block_num": 127520707,
+              "timestamp": "2026-10-14T03:13:15Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-45315285-f6cc-4aa3-b870-d1046a188d99-c000.zstd.parquet",
+          "bytes": 262950440,
+          "stats": {
+            "numRecords": 8030120,
+            "minValues": {
+              "timestamp": "2026-10-14T03:13:15Z",
+              "block_num": 127520708
+            },
+            "maxValues": {
+              "block_num": 127530665,
+              "timestamp": "2026-10-14T04:27:57Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-b266b464-4a08-4a03-8045-eb3bc190085a-c000.zstd.parquet",
+          "bytes": 258374653,
+          "stats": {
+            "numRecords": 7539720,
+            "minValues": {
+              "block_num": 127530666,
+              "timestamp": "2026-10-14T04:27:58Z"
+            },
+            "maxValues": {
+              "block_num": 127541523,
+              "timestamp": "2026-10-14T05:49:27Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-4c829833-5ffd-4821-acba-d3596cf1d5d0-c000.zstd.parquet",
+          "bytes": 262944809,
+          "stats": {
+            "numRecords": 7580814,
+            "minValues": {
+              "timestamp": "2026-10-14T05:49:27Z",
+              "block_num": 127541524
+            },
+            "maxValues": {
+              "block_num": 127552991,
+              "timestamp": "2026-10-14T07:15:30Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-d997dc73-257f-423e-b558-834842e9af64-c000.zstd.parquet",
+          "bytes": 259033985,
+          "stats": {
+            "numRecords": 7573129,
+            "minValues": {
+              "block_num": 127552992,
+              "timestamp": "2026-10-14T07:15:30Z"
+            },
+            "maxValues": {
+              "block_num": 127563002,
+              "timestamp": "2026-10-14T08:30:38Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-fc3a3edb-8e6b-49bc-9e74-173c1b36ae03-c000.zstd.parquet",
+          "bytes": 262516393,
+          "stats": {
+            "numRecords": 7762033,
+            "minValues": {
+              "block_num": 127563003,
+              "timestamp": "2026-10-14T08:30:39Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T09:54:02Z",
+              "block_num": 127574116
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-993b5669-590a-4115-b848-7de0db8a65d4-c000.zstd.parquet",
+          "bytes": 259531528,
+          "stats": {
+            "numRecords": 7626612,
+            "minValues": {
+              "timestamp": "2026-10-14T09:54:02Z",
+              "block_num": 127574117
+            },
+            "maxValues": {
+              "block_num": 127586226,
+              "timestamp": "2026-10-14T11:24:53Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-3f24e2e7-b706-4bb5-bd11-db311d193d16-c000.zstd.parquet",
+          "bytes": 257298927,
+          "stats": {
+            "numRecords": 7490507,
+            "minValues": {
+              "timestamp": "2026-10-14T11:24:54Z",
+              "block_num": 127586227
+            },
+            "maxValues": {
+              "block_num": 127596766,
+              "timestamp": "2026-10-14T12:43:58Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-f41dcbe9-5e38-4716-a69a-419859e22e46-c000.zstd.parquet",
+          "bytes": 257015219,
+          "stats": {
+            "numRecords": 7834932,
+            "minValues": {
+              "timestamp": "2026-10-14T12:43:59Z",
+              "block_num": 127596767
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T13:50:25Z",
+              "block_num": 127605620
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-9b7b0fec-a6b4-4e90-89a8-5e6191dd24b9-c000.zstd.parquet",
+          "bytes": 257809834,
+          "stats": {
+            "numRecords": 7661924,
+            "minValues": {
+              "timestamp": "2026-10-14T13:50:25Z",
+              "block_num": 127605621
+            },
+            "maxValues": {
+              "block_num": 127614849,
+              "timestamp": "2026-10-14T14:59:40Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-f4091984-482c-4fb9-a37a-275bf2eb0e22-c000.zstd.parquet",
+          "bytes": 258737432,
+          "stats": {
+            "numRecords": 7489100,
+            "minValues": {
+              "block_num": 127614850,
+              "timestamp": "2026-10-14T14:59:40Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T16:33:35Z",
+              "block_num": 127627362
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-a5020094-5ee4-4b11-a54e-dfa33ab052fa-c000.zstd.parquet",
+          "bytes": 257286718,
+          "stats": {
+            "numRecords": 7410149,
+            "minValues": {
+              "block_num": 127627363,
+              "timestamp": "2026-10-14T16:33:35Z"
+            },
+            "maxValues": {
+              "block_num": 127641017,
+              "timestamp": "2026-10-14T18:16:01Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-3a0920f4-5797-4810-b740-19d2dd29a15e-c000.zstd.parquet",
+          "bytes": 259792241,
+          "stats": {
+            "numRecords": 7872489,
+            "minValues": {
+              "timestamp": "2026-10-14T18:16:01Z",
+              "block_num": 127641018
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T20:18:20Z",
+              "block_num": 127657327
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-34a80a24-e7d4-49b6-a63a-6cfd797a9506-c000.zstd.parquet",
+          "bytes": 264191395,
+          "stats": {
+            "numRecords": 7979203,
+            "minValues": {
+              "block_num": 127657328,
+              "timestamp": "2026-10-14T20:18:21Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T22:42:58Z",
+              "block_num": 127676609
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-10314fad-723b-428a-a3ea-37bb4a723dc3-c000.zstd.parquet",
+          "bytes": 133085663,
+          "stats": {
+            "numRecords": 4083529,
+            "minValues": {
+              "block_num": 127676610,
+              "timestamp": "2026-10-14T22:42:59Z"
+            },
+            "maxValues": {
+              "block_num": 127686874,
+              "timestamp": "2026-10-14T23:59:59Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-3c17e941-5cb7-4502-8d66-7fea5bf0e249-c000.zstd.parquet",
+          "bytes": 259340231,
+          "stats": {
+            "numRecords": 7430608,
+            "minValues": {
+              "block_num": 127303029,
+              "timestamp": "2026-10-13T00:00:00Z"
+            },
+            "maxValues": {
+              "block_num": 127314846,
+              "timestamp": "2026-10-13T01:28:38Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-5365324b-5e39-43d2-a7da-88ef5c99e427-c000.zstd.parquet",
+          "bytes": 263660221,
+          "stats": {
+            "numRecords": 7940485,
+            "minValues": {
+              "block_num": 127314847,
+              "timestamp": "2026-10-13T01:28:39Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T03:21:23Z",
+              "block_num": 127329872
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-76bd8378-d8d3-4388-ba4c-69234f926f6e-c000.zstd.parquet",
+          "bytes": 263578786,
+          "stats": {
+            "numRecords": 7919932,
+            "minValues": {
+              "timestamp": "2026-10-13T03:21:23Z",
+              "block_num": 127329873
+            },
+            "maxValues": {
+              "block_num": 127343448,
+              "timestamp": "2026-10-13T05:03:13Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-b18586c3-4998-41a4-9578-92b0e7e5f420-c000.zstd.parquet",
+          "bytes": 259135024,
+          "stats": {
+            "numRecords": 7724523,
+            "minValues": {
+              "block_num": 127343449,
+              "timestamp": "2026-10-13T05:03:14Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T06:42:55Z",
+              "block_num": 127356735
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-18384bae-539e-4147-b4ab-ddf93be4ecce-c000.zstd.parquet",
+          "bytes": 261450421,
+          "stats": {
+            "numRecords": 7792149,
+            "minValues": {
+              "block_num": 127356736,
+              "timestamp": "2026-10-13T06:42:55Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T08:18:29Z",
+              "block_num": 127369474
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-82fb4ccd-1d90-45da-8a98-e63e500bc596-c000.zstd.parquet",
+          "bytes": 258441846,
+          "stats": {
+            "numRecords": 7628536,
+            "minValues": {
+              "timestamp": "2026-10-13T08:18:30Z",
+              "block_num": 127369475
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T09:48:11Z",
+              "block_num": 127381396
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-ec0054e7-0d06-462a-bb4b-5baa0aff2d64-c000.zstd.parquet",
+          "bytes": 259766991,
+          "stats": {
+            "numRecords": 7830353,
+            "minValues": {
+              "block_num": 127381397,
+              "timestamp": "2026-10-13T09:48:12Z"
+            },
+            "maxValues": {
+              "block_num": 127393686,
+              "timestamp": "2026-10-13T11:20:23Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-e90ac6aa-f3b8-410a-a0a2-78552b35ec4c-c000.zstd.parquet",
+          "bytes": 264435623,
+          "stats": {
+            "numRecords": 7715172,
+            "minValues": {
+              "timestamp": "2026-10-13T11:20:24Z",
+              "block_num": 127393687
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T12:46:13Z",
+              "block_num": 127405128
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-c5843a47-2216-4f0a-bcb5-f47e6b370848-c000.zstd.parquet",
+          "bytes": 263566680,
+          "stats": {
+            "numRecords": 8290227,
+            "minValues": {
+              "block_num": 127405129,
+              "timestamp": "2026-10-13T12:46:14Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T14:02:00Z",
+              "block_num": 127415229
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-5983d22d-c761-4349-a876-6874a05cd64e-c000.zstd.parquet",
+          "bytes": 257813298,
+          "stats": {
+            "numRecords": 7730853,
+            "minValues": {
+              "timestamp": "2026-10-13T14:02:00Z",
+              "block_num": 127415230
+            },
+            "maxValues": {
+              "block_num": 127426353,
+              "timestamp": "2026-10-13T15:25:27Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-c1e2b7dc-fa58-4250-8fe5-4b586e39df24-c000.zstd.parquet",
+          "bytes": 259011415,
+          "stats": {
+            "numRecords": 7414647,
+            "minValues": {
+              "timestamp": "2026-10-13T15:25:27Z",
+              "block_num": 127426354
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T16:57:17Z",
+              "block_num": 127438595
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-b6cbc488-08c0-490c-8b2a-1f27ce77758f-c000.zstd.parquet",
+          "bytes": 258006798,
+          "stats": {
+            "numRecords": 7444174,
+            "minValues": {
+              "timestamp": "2026-10-13T16:57:17Z",
+              "block_num": 127438596
+            },
+            "maxValues": {
+              "block_num": 127454516,
+              "timestamp": "2026-10-13T18:56:44Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-5a465c5c-bbb3-4e87-872f-0baa98f220fd-c000.zstd.parquet",
+          "bytes": 264578856,
+          "stats": {
+            "numRecords": 7810371,
+            "minValues": {
+              "block_num": 127454517,
+              "timestamp": "2026-10-13T18:56:44Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T21:38:20Z",
+              "block_num": 127476062
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-bd87ed44-10fe-4297-9053-53c432f0eea9-c000.zstd.parquet",
+          "bytes": 212411957,
+          "stats": {
+            "numRecords": 6596958,
+            "minValues": {
+              "block_num": 127476063,
+              "timestamp": "2026-10-13T21:38:20Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T23:59:59Z",
+              "block_num": 127494945
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-6c87b1ab-867d-4391-9807-87521b0df05a-c000.zstd.parquet",
+          "bytes": 260740023,
+          "stats": {
+            "numRecords": 8028879,
+            "minValues": {
+              "block_num": 127111629,
+              "timestamp": "2026-10-12T00:00:00Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-12T01:50:44Z",
+              "block_num": 127126392
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-9e24bc90-03b8-4d5f-94de-bc803b57a74d-c000.zstd.parquet",
+          "bytes": 262652580,
+          "stats": {
+            "numRecords": 7846385,
+            "minValues": {
+              "block_num": 127126393,
+              "timestamp": "2026-10-12T01:50:44Z"
+            },
+            "maxValues": {
+              "block_num": 127140600,
+              "timestamp": "2026-10-12T03:40:23Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-d83da4dd-260d-4c85-a2c5-eb974b636c38-c000.zstd.parquet",
+          "bytes": 262834016,
+          "stats": {
+            "numRecords": 7750620,
+            "minValues": {
+              "timestamp": "2026-10-12T03:40:24Z",
+              "block_num": 127140601
+            },
+            "maxValues": {
+              "block_num": 127155117,
+              "timestamp": "2026-10-12T05:29:19Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-dfdf73d9-43f0-4465-956e-736f776fe96b-c000.zstd.parquet",
+          "bytes": 259303965,
+          "stats": {
+            "numRecords": 7701148,
+            "minValues": {
+              "block_num": 127155118,
+              "timestamp": "2026-10-12T05:29:19Z"
+            },
+            "maxValues": {
+              "block_num": 127168184,
+              "timestamp": "2026-10-12T07:07:21Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-dfc371b5-8322-4e5f-8023-357554a43ee5-c000.zstd.parquet",
+          "bytes": 264134147,
+          "stats": {
+            "numRecords": 7970298,
+            "minValues": {
+              "block_num": 127168185,
+              "timestamp": "2026-10-12T07:07:21Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-12T08:33:03Z",
+              "block_num": 127179517
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-9cf3be54-a348-4d0b-a734-5cfb28c40d4f-c000.zstd.parquet",
+          "bytes": 259832361,
+          "stats": {
+            "numRecords": 7782928,
+            "minValues": {
+              "block_num": 127179518,
+              "timestamp": "2026-10-12T08:33:03Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-12T10:04:12Z",
+              "block_num": 127191665
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-ae47a71d-33a6-4ad3-93aa-cf0b831dd128-c000.zstd.parquet",
+          "bytes": 264230551,
+          "stats": {
+            "numRecords": 7880548,
+            "minValues": {
+              "timestamp": "2026-10-12T10:04:12Z",
+              "block_num": 127191666
+            },
+            "maxValues": {
+              "block_num": 127205372,
+              "timestamp": "2026-10-12T11:47:03Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-58926d33-4f8b-42af-9f66-def588b83ac5-c000.zstd.parquet",
+          "bytes": 255509178,
+          "stats": {
+            "numRecords": 7400489,
+            "minValues": {
+              "block_num": 127205373,
+              "timestamp": "2026-10-12T11:47:03Z"
+            },
+            "maxValues": {
+              "block_num": 127216390,
+              "timestamp": "2026-10-12T13:09:44Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-9e1aa0c3-d5e5-4622-acb6-4b708c8ef396-c000.zstd.parquet",
+          "bytes": 257610563,
+          "stats": {
+            "numRecords": 7918868,
+            "minValues": {
+              "timestamp": "2026-10-12T13:09:44Z",
+              "block_num": 127216391
+            },
+            "maxValues": {
+              "block_num": 127226002,
+              "timestamp": "2026-10-12T14:21:54Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-4a453f90-865f-4cbb-8fc3-b56cfc7414ff-c000.zstd.parquet",
+          "bytes": 263458933,
+          "stats": {
+            "numRecords": 7726743,
+            "minValues": {
+              "timestamp": "2026-10-12T14:21:54Z",
+              "block_num": 127226003
+            },
+            "maxValues": {
+              "timestamp": "2026-10-12T15:38:36Z",
+              "block_num": 127236224
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-d3883f64-2301-4d2a-a36a-21cd391b8589-c000.zstd.parquet",
+          "bytes": 262204654,
+          "stats": {
+            "numRecords": 7602440,
+            "minValues": {
+              "block_num": 127236225,
+              "timestamp": "2026-10-12T15:38:36Z"
+            },
+            "maxValues": {
+              "block_num": 127250083,
+              "timestamp": "2026-10-12T17:22:38Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-6fcf74df-0f47-4776-bfb3-3c45f756423d-c000.zstd.parquet",
+          "bytes": 262789567,
+          "stats": {
+            "numRecords": 7700233,
+            "minValues": {
+              "timestamp": "2026-10-12T17:22:38Z",
+              "block_num": 127250084
+            },
+            "maxValues": {
+              "timestamp": "2026-10-12T19:37:07Z",
+              "block_num": 127267996
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-e065b43c-fa1e-4ef0-9afd-36b69cf0adb4-c000.zstd.parquet",
+          "bytes": 259089406,
+          "stats": {
+            "numRecords": 7500694,
+            "minValues": {
+              "timestamp": "2026-10-12T19:37:08Z",
+              "block_num": 127267997
+            },
+            "maxValues": {
+              "block_num": 127287383,
+              "timestamp": "2026-10-12T22:02:37Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-67347a32-6d09-4778-a790-5d9a0f679890-c000.zstd.parquet",
+          "bytes": 208810740,
+          "stats": {
+            "numRecords": 6381149,
+            "minValues": {
+              "timestamp": "2026-10-12T22:02:37Z",
+              "block_num": 127287384
+            },
+            "maxValues": {
+              "block_num": 127303028,
+              "timestamp": "2026-10-12T23:59:59Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-c510450f-1c4f-4b4a-b3fd-99821a925bab-c000.zstd.parquet",
+          "bytes": 261381234,
+          "stats": {
+            "numRecords": 7826657,
+            "minValues": {
+              "timestamp": "2026-10-11T00:00:00Z",
+              "block_num": 126919958
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T02:08:34Z",
+              "block_num": 126937098
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-a829f7f9-48d1-486f-9ddb-ce8396f4a727-c000.zstd.parquet",
+          "bytes": 258785251,
+          "stats": {
+            "numRecords": 7559214,
+            "minValues": {
+              "timestamp": "2026-10-11T02:08:34Z",
+              "block_num": 126937099
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T04:07:31Z",
+              "block_num": 126952952
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-3a68a42b-b3ce-42bc-910f-5f14914a9f41-c000.zstd.parquet",
+          "bytes": 258918056,
+          "stats": {
+            "numRecords": 7554660,
+            "minValues": {
+              "block_num": 126952953,
+              "timestamp": "2026-10-11T04:07:32Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T06:11:02Z",
+              "block_num": 126969415
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-ad9ea71e-3892-4b9d-952a-250488bf3ddc-c000.zstd.parquet",
+          "bytes": 258633767,
+          "stats": {
+            "numRecords": 7594182,
+            "minValues": {
+              "timestamp": "2026-10-11T06:11:03Z",
+              "block_num": 126969416
+            },
+            "maxValues": {
+              "block_num": 126985015,
+              "timestamp": "2026-10-11T08:08:03Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-89a85228-ff5d-4f51-8564-d285d1ebab30-c000.zstd.parquet",
+          "bytes": 262299203,
+          "stats": {
+            "numRecords": 7744846,
+            "minValues": {
+              "timestamp": "2026-10-11T08:08:03Z",
+              "block_num": 126985016
+            },
+            "maxValues": {
+              "block_num": 127000381,
+              "timestamp": "2026-10-11T10:03:18Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-c1078856-9c10-40e8-8af5-b8e56d8a2717-c000.zstd.parquet",
+          "bytes": 257603362,
+          "stats": {
+            "numRecords": 7386378,
+            "minValues": {
+              "timestamp": "2026-10-11T10:03:19Z",
+              "block_num": 127000382
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T11:51:00Z",
+              "block_num": 127014737
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-6952c1b4-7a3a-4bd2-9203-572469678612-c000.zstd.parquet",
+          "bytes": 256949470,
+          "stats": {
+            "numRecords": 7704804,
+            "minValues": {
+              "block_num": 127014738,
+              "timestamp": "2026-10-11T11:51:01Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T13:26:43Z",
+              "block_num": 127027490
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-526f0c3c-e38c-478e-80ab-518f3c4adeec-c000.zstd.parquet",
+          "bytes": 262042985,
+          "stats": {
+            "numRecords": 8060940,
+            "minValues": {
+              "timestamp": "2026-10-11T13:26:43Z",
+              "block_num": 127027491
+            },
+            "maxValues": {
+              "block_num": 127040250,
+              "timestamp": "2026-10-11T15:02:25Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-f805f65c-d2e2-409d-8081-692d22a97db0-c000.zstd.parquet",
+          "bytes": 258966934,
+          "stats": {
+            "numRecords": 7518809,
+            "minValues": {
+              "timestamp": "2026-10-11T15:02:26Z",
+              "block_num": 127040251
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T16:41:54Z",
+              "block_num": 127053511
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-20030de3-d758-446c-9112-9e1aec9af2cb-c000.zstd.parquet",
+          "bytes": 262077171,
+          "stats": {
+            "numRecords": 7780984,
+            "minValues": {
+              "block_num": 127053512,
+              "timestamp": "2026-10-11T16:41:54Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T18:36:55Z",
+              "block_num": 127068558
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-7a8a7b7e-2130-4162-a9c2-5accc50586e4-c000.zstd.parquet",
+          "bytes": 258776378,
+          "stats": {
+            "numRecords": 7181965,
+            "minValues": {
+              "block_num": 127068559,
+              "timestamp": "2026-10-11T18:36:56Z"
+            },
+            "maxValues": {
+              "block_num": 127088434,
+              "timestamp": "2026-10-11T21:06:00Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-545a7471-b4cf-438e-8734-9608a70e62e4-c000.zstd.parquet",
+          "bytes": 260710317,
+          "stats": {
+            "numRecords": 7780459,
+            "minValues": {
+              "block_num": 127088435,
+              "timestamp": "2026-10-11T21:06:01Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T23:35:06Z",
+              "block_num": 127108310
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-1eba7071-6e35-4ef2-a3c0-fddd14a16ac3-c000.zstd.parquet",
+          "bytes": 54439717,
+          "stats": {
+            "numRecords": 1664490,
+            "minValues": {
+              "timestamp": "2026-10-11T23:35:07Z",
+              "block_num": 127108311
+            },
+            "maxValues": {
+              "block_num": 127111628,
+              "timestamp": "2026-10-11T23:59:59Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-9110007e-4c80-4fa5-9a7e-e251693584fc-c000.zstd.parquet",
+          "bytes": 264314336,
+          "stats": {
+            "numRecords": 7787873,
+            "minValues": {
+              "timestamp": "2026-10-10T00:00:00Z",
+              "block_num": 126728031
+            },
+            "maxValues": {
+              "block_num": 126745942,
+              "timestamp": "2026-10-10T02:14:22Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-0c94f3f2-cce2-4344-837b-e1b3a9af944e-c000.zstd.parquet",
+          "bytes": 257228369,
+          "stats": {
+            "numRecords": 7335131,
+            "minValues": {
+              "block_num": 126745943,
+              "timestamp": "2026-10-10T02:14:22Z"
+            },
+            "maxValues": {
+              "block_num": 126762420,
+              "timestamp": "2026-10-10T04:17:58Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-e908e6cd-800c-4e5b-a6c4-5fd6d0d94914-c000.zstd.parquet",
+          "bytes": 262040689,
+          "stats": {
+            "numRecords": 7373465,
+            "minValues": {
+              "block_num": 126762421,
+              "timestamp": "2026-10-10T04:17:59Z"
+            },
+            "maxValues": {
+              "block_num": 126779164,
+              "timestamp": "2026-10-10T06:23:36Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-027e0a39-3015-42a0-a3eb-0f6333a66359-c000.zstd.parquet",
+          "bytes": 258987000,
+          "stats": {
+            "numRecords": 7328839,
+            "minValues": {
+              "block_num": 126779165,
+              "timestamp": "2026-10-10T06:23:36Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T08:15:58Z",
+              "block_num": 126794144
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-fa3faf85-986b-4615-ae5b-b24d777c99a8-c000.zstd.parquet",
+          "bytes": 258896320,
+          "stats": {
+            "numRecords": 7437969,
+            "minValues": {
+              "block_num": 126794145,
+              "timestamp": "2026-10-10T08:15:58Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T10:04:38Z",
+              "block_num": 126808628
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-dbf2d39c-86f2-411d-a180-cf52f004349d-c000.zstd.parquet",
+          "bytes": 260713496,
+          "stats": {
+            "numRecords": 7543645,
+            "minValues": {
+              "timestamp": "2026-10-10T10:04:38Z",
+              "block_num": 126808629
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T11:57:17Z",
+              "block_num": 126823645
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-1cdb07d5-4e24-4be3-b671-2446130dff95-c000.zstd.parquet",
+          "bytes": 255968012,
+          "stats": {
+            "numRecords": 7652879,
+            "minValues": {
+              "block_num": 126823646,
+              "timestamp": "2026-10-10T11:57:17Z"
+            },
+            "maxValues": {
+              "block_num": 126835603,
+              "timestamp": "2026-10-10T13:26:59Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-9f920ad8-084c-45e1-a44e-ac5d0967d16f-c000.zstd.parquet",
+          "bytes": 257539590,
+          "stats": {
+            "numRecords": 7638520,
+            "minValues": {
+              "block_num": 126835604,
+              "timestamp": "2026-10-10T13:27:00Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T15:01:39Z",
+              "block_num": 126848219
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-170c02e5-e44f-4daa-bd41-4bc4b2101b6c-c000.zstd.parquet",
+          "bytes": 260639390,
+          "stats": {
+            "numRecords": 7410019,
+            "minValues": {
+              "timestamp": "2026-10-10T15:01:40Z",
+              "block_num": 126848220
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T16:45:08Z",
+              "block_num": 126862003
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-6c56df7d-4d10-4803-a566-e184633ec104-c000.zstd.parquet",
+          "bytes": 262987758,
+          "stats": {
+            "numRecords": 7523038,
+            "minValues": {
+              "block_num": 126862004,
+              "timestamp": "2026-10-10T16:45:08Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T18:55:34Z",
+              "block_num": 126879383
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-9d21887e-4c39-48ef-bd89-5e26d32b5e63-c000.zstd.parquet",
+          "bytes": 256414551,
+          "stats": {
+            "numRecords": 7232944,
+            "minValues": {
+              "block_num": 126879384,
+              "timestamp": "2026-10-10T18:55:34Z"
+            },
+            "maxValues": {
+              "block_num": 126893776,
+              "timestamp": "2026-10-10T20:43:33Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-dce580cd-bfe8-403f-bb4a-7b5778c7a99f-c000.zstd.parquet",
+          "bytes": 263897143,
+          "stats": {
+            "numRecords": 7712043,
+            "minValues": {
+              "block_num": 126893777,
+              "timestamp": "2026-10-10T20:43:33Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T23:40:59Z",
+              "block_num": 126917423
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-ec7f6e19-51ae-4c44-b794-aa9a6af06722-c000.zstd.parquet",
+          "bytes": 30732010,
+          "stats": {
+            "numRecords": 925786,
+            "minValues": {
+              "block_num": 126917424,
+              "timestamp": "2026-10-10T23:40:59Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T23:59:59Z",
+              "block_num": 126919957
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        }
+      ]
+    },
+    "transactions": {
+      "checkpoint_version": 13533,
+      "checkpoint_sha256": "db7119439b114227c53970f386534281bbb2b3de0e1d6218f90b31bd7ea11062",
+      "active_files": [
+        {
+          "path": "date=2026-10-14/part-00000-e5100616-04e1-43cd-96ec-ed91872cc395-c000.zstd.parquet",
+          "bytes": 254270276,
+          "stats": {
+            "numRecords": 803379,
+            "minValues": {
+              "block_num": 127494946,
+              "timestamp": "2026-10-14T00:00:00Z"
+            },
+            "maxValues": {
+              "block_num": 127506574,
+              "timestamp": "2026-10-14T01:27:14Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-f359821c-2cef-4061-8500-02356c534955-c000.zstd.parquet",
+          "bytes": 257563487,
+          "stats": {
+            "numRecords": 825982,
+            "minValues": {
+              "timestamp": "2026-10-14T01:27:14Z",
+              "block_num": 127506575
+            },
+            "maxValues": {
+              "block_num": 127516744,
+              "timestamp": "2026-10-14T02:43:31Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-5522efe0-0010-4cf3-b94d-9eb86a467efe-c000.zstd.parquet",
+          "bytes": 258753868,
+          "stats": {
+            "numRecords": 816301,
+            "minValues": {
+              "timestamp": "2026-10-14T02:43:31Z",
+              "block_num": 127516745
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T03:54:43Z",
+              "block_num": 127526236
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-68c98032-2310-4c64-94c3-3282bfe08545-c000.zstd.parquet",
+          "bytes": 254034306,
+          "stats": {
+            "numRecords": 790813,
+            "minValues": {
+              "timestamp": "2026-10-14T03:54:44Z",
+              "block_num": 127526237
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T04:52:54Z",
+              "block_num": 127533988
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-aff68089-14a6-4cda-83ea-8b4ae411fc1c-c000.zstd.parquet",
+          "bytes": 253437362,
+          "stats": {
+            "numRecords": 721302,
+            "minValues": {
+              "block_num": 127533989,
+              "timestamp": "2026-10-14T04:52:54Z"
+            },
+            "maxValues": {
+              "block_num": 127542601,
+              "timestamp": "2026-10-14T05:57:32Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-14528e7b-6f06-4c9a-b97d-cf2254a140d0-c000.zstd.parquet",
+          "bytes": 252686109,
+          "stats": {
+            "numRecords": 758744,
+            "minValues": {
+              "block_num": 127542602,
+              "timestamp": "2026-10-14T05:57:32Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T07:04:37Z",
+              "block_num": 127551542
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-557be35c-f0df-458e-bb12-5da8f774d00c-c000.zstd.parquet",
+          "bytes": 251591956,
+          "stats": {
+            "numRecords": 782312,
+            "minValues": {
+              "block_num": 127551543,
+              "timestamp": "2026-10-14T07:04:38Z"
+            },
+            "maxValues": {
+              "block_num": 127559852,
+              "timestamp": "2026-10-14T08:06:59Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-fd97bb8b-0c50-4ecd-97d6-9b3f9c8984b5-c000.zstd.parquet",
+          "bytes": 255769672,
+          "stats": {
+            "numRecords": 809161,
+            "minValues": {
+              "block_num": 127559853,
+              "timestamp": "2026-10-14T08:06:59Z"
+            },
+            "maxValues": {
+              "block_num": 127567889,
+              "timestamp": "2026-10-14T09:07:17Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-4ac4b996-d739-4f0f-a064-75ff71982efd-c000.zstd.parquet",
+          "bytes": 262312157,
+          "stats": {
+            "numRecords": 813071,
+            "minValues": {
+              "timestamp": "2026-10-14T09:07:18Z",
+              "block_num": 127567890
+            },
+            "maxValues": {
+              "block_num": 127576777,
+              "timestamp": "2026-10-14T10:14:00Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-5893cce2-ec64-4aab-b541-580e20e2ca8c-c000.zstd.parquet",
+          "bytes": 257959888,
+          "stats": {
+            "numRecords": 798179,
+            "minValues": {
+              "block_num": 127576778,
+              "timestamp": "2026-10-14T10:14:01Z"
+            },
+            "maxValues": {
+              "block_num": 127586226,
+              "timestamp": "2026-10-14T11:24:53Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-8e7e9e2e-9a4e-41d5-9c15-5e51496552aa-c000.zstd.parquet",
+          "bytes": 256187185,
+          "stats": {
+            "numRecords": 813227,
+            "minValues": {
+              "timestamp": "2026-10-14T11:24:54Z",
+              "block_num": 127586227
+            },
+            "maxValues": {
+              "block_num": 127594759,
+              "timestamp": "2026-10-14T12:28:55Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-02a73989-0bb6-44c8-937a-4a9995e145e2-c000.zstd.parquet",
+          "bytes": 253064689,
+          "stats": {
+            "numRecords": 885286,
+            "minValues": {
+              "timestamp": "2026-10-14T12:28:56Z",
+              "block_num": 127594760
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T13:14:40Z",
+              "block_num": 127600857
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-06603b4c-1772-42cd-a132-df2e168cd45e-c000.zstd.parquet",
+          "bytes": 258762120,
+          "stats": {
+            "numRecords": 867376,
+            "minValues": {
+              "block_num": 127600858,
+              "timestamp": "2026-10-14T13:14:41Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T14:05:38Z",
+              "block_num": 127607648
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-7d02505b-66c7-4524-87a8-8397ad4480f4-c000.zstd.parquet",
+          "bytes": 256752398,
+          "stats": {
+            "numRecords": 846609,
+            "minValues": {
+              "timestamp": "2026-10-14T14:05:38Z",
+              "block_num": 127607649
+            },
+            "maxValues": {
+              "block_num": 127614849,
+              "timestamp": "2026-10-14T14:59:40Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-248c7de4-c8b1-458d-8771-e5ad1b6dcc67-c000.zstd.parquet",
+          "bytes": 253839292,
+          "stats": {
+            "numRecords": 813152,
+            "minValues": {
+              "block_num": 127614850,
+              "timestamp": "2026-10-14T14:59:40Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T16:03:51Z",
+              "block_num": 127623403
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-7d217ba9-eb9a-4258-a242-6532be981118-c000.zstd.parquet",
+          "bytes": 257821536,
+          "stats": {
+            "numRecords": 798208,
+            "minValues": {
+              "block_num": 127623404,
+              "timestamp": "2026-10-14T16:03:52Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T17:15:22Z",
+              "block_num": 127632932
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-b91d15e2-4484-4382-8b93-575742b0d151-c000.zstd.parquet",
+          "bytes": 258043354,
+          "stats": {
+            "numRecords": 778596,
+            "minValues": {
+              "block_num": 127632933,
+              "timestamp": "2026-10-14T17:15:22Z"
+            },
+            "maxValues": {
+              "block_num": 127643697,
+              "timestamp": "2026-10-14T18:36:07Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-5a3e7cd0-a8c9-405a-af7b-7af6211091c3-c000.zstd.parquet",
+          "bytes": 260248706,
+          "stats": {
+            "numRecords": 805066,
+            "minValues": {
+              "timestamp": "2026-10-14T18:36:07Z",
+              "block_num": 127643698
+            },
+            "maxValues": {
+              "block_num": 127656263,
+              "timestamp": "2026-10-14T20:10:22Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-4d28f047-2143-4a08-a3a3-b230d21919f6-c000.zstd.parquet",
+          "bytes": 261015921,
+          "stats": {
+            "numRecords": 828039,
+            "minValues": {
+              "timestamp": "2026-10-14T20:10:22Z",
+              "block_num": 127656264
+            },
+            "maxValues": {
+              "block_num": 127670098,
+              "timestamp": "2026-10-14T21:54:08Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-89b7c48d-119a-49b8-91f9-edabe1a45746-c000.zstd.parquet",
+          "bytes": 263023386,
+          "stats": {
+            "numRecords": 872051,
+            "minValues": {
+              "block_num": 127670099,
+              "timestamp": "2026-10-14T21:54:09Z"
+            },
+            "maxValues": {
+              "block_num": 127685041,
+              "timestamp": "2026-10-14T23:46:15Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-14/part-00000-0b31f29e-4b5a-46d1-902e-cf1dd7de9ee1-c000.zstd.parquet",
+          "bytes": 30617751,
+          "stats": {
+            "numRecords": 103136,
+            "minValues": {
+              "timestamp": "2026-10-14T23:46:15Z",
+              "block_num": 127685042
+            },
+            "maxValues": {
+              "timestamp": "2026-10-14T23:59:59Z",
+              "block_num": 127686874
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-468a67a0-ac03-4af9-babb-fa656376b942-c000.zstd.parquet",
+          "bytes": 252756760,
+          "stats": {
+            "numRecords": 836651,
+            "minValues": {
+              "block_num": 127303029,
+              "timestamp": "2026-10-13T00:00:00Z"
+            },
+            "maxValues": {
+              "block_num": 127311860,
+              "timestamp": "2026-10-13T01:06:15Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-2005ef38-7020-4c69-9de8-34f34a0dbc48-c000.zstd.parquet",
+          "bytes": 256576039,
+          "stats": {
+            "numRecords": 822611,
+            "minValues": {
+              "block_num": 127311861,
+              "timestamp": "2026-10-13T01:06:15Z"
+            },
+            "maxValues": {
+              "block_num": 127322344,
+              "timestamp": "2026-10-13T02:24:54Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-a0d9ad76-0e77-4145-8b44-dd07e3fa6765-c000.zstd.parquet",
+          "bytes": 254637663,
+          "stats": {
+            "numRecords": 832581,
+            "minValues": {
+              "timestamp": "2026-10-13T02:24:54Z",
+              "block_num": 127322345
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T03:45:07Z",
+              "block_num": 127333038
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-9cc85375-b831-48ec-86f9-f4f82f5a0738-c000.zstd.parquet",
+          "bytes": 257997012,
+          "stats": {
+            "numRecords": 800793,
+            "minValues": {
+              "block_num": 127333039,
+              "timestamp": "2026-10-13T03:45:08Z"
+            },
+            "maxValues": {
+              "block_num": 127343044,
+              "timestamp": "2026-10-13T05:00:12Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-62319d1c-3d3c-4e70-b88c-a1e26e3c1c95-c000.zstd.parquet",
+          "bytes": 255688321,
+          "stats": {
+            "numRecords": 815282,
+            "minValues": {
+              "block_num": 127343045,
+              "timestamp": "2026-10-13T05:00:12Z"
+            },
+            "maxValues": {
+              "block_num": 127353570,
+              "timestamp": "2026-10-13T06:19:11Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-eafd9ca6-73a4-4aee-9309-bf65c625cd77-c000.zstd.parquet",
+          "bytes": 256392131,
+          "stats": {
+            "numRecords": 818931,
+            "minValues": {
+              "block_num": 127353571,
+              "timestamp": "2026-10-13T06:19:11Z"
+            },
+            "maxValues": {
+              "block_num": 127363760,
+              "timestamp": "2026-10-13T07:35:37Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-c69e81d0-8cd7-4adb-bbb2-2d38cc5cff72-c000.zstd.parquet",
+          "bytes": 262346681,
+          "stats": {
+            "numRecords": 840817,
+            "minValues": {
+              "block_num": 127363761,
+              "timestamp": "2026-10-13T07:35:37Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T08:44:22Z",
+              "block_num": 127372924
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-513a7b82-e0e7-497a-98aa-a23ba9dcba73-c000.zstd.parquet",
+          "bytes": 250802496,
+          "stats": {
+            "numRecords": 814680,
+            "minValues": {
+              "block_num": 127372925,
+              "timestamp": "2026-10-13T08:44:22Z"
+            },
+            "maxValues": {
+              "block_num": 127381833,
+              "timestamp": "2026-10-13T09:51:28Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-01095d98-7221-4782-aab5-c8438109425b-c000.zstd.parquet",
+          "bytes": 254621978,
+          "stats": {
+            "numRecords": 854265,
+            "minValues": {
+              "timestamp": "2026-10-13T09:51:28Z",
+              "block_num": 127381834
+            },
+            "maxValues": {
+              "block_num": 127390308,
+              "timestamp": "2026-10-13T10:55:03Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-5e4a0d2d-272c-449d-ba58-def409102ca8-c000.zstd.parquet",
+          "bytes": 257405403,
+          "stats": {
+            "numRecords": 822204,
+            "minValues": {
+              "timestamp": "2026-10-13T10:55:04Z",
+              "block_num": 127390309
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T11:59:34Z",
+              "block_num": 127398909
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-ec772e67-569c-4dd6-914a-23b1585387ce-c000.zstd.parquet",
+          "bytes": 261388091,
+          "stats": {
+            "numRecords": 817280,
+            "minValues": {
+              "block_num": 127398910,
+              "timestamp": "2026-10-13T11:59:34Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T13:04:53Z",
+              "block_num": 127407617
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-fb808bcb-d708-4da2-a096-a9215bdcebea-c000.zstd.parquet",
+          "bytes": 256950459,
+          "stats": {
+            "numRecords": 832387,
+            "minValues": {
+              "timestamp": "2026-10-13T13:04:54Z",
+              "block_num": 127407618
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T13:59:54Z",
+              "block_num": 127414948
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-4b754923-0bfe-4886-9763-7c6ebd004aa0-c000.zstd.parquet",
+          "bytes": 257823871,
+          "stats": {
+            "numRecords": 833303,
+            "minValues": {
+              "block_num": 127414949,
+              "timestamp": "2026-10-13T13:59:54Z"
+            },
+            "maxValues": {
+              "block_num": 127422789,
+              "timestamp": "2026-10-13T14:58:43Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-f94b8e23-39a1-40c8-a86c-fdb31dc4a549-c000.zstd.parquet",
+          "bytes": 256821404,
+          "stats": {
+            "numRecords": 823347,
+            "minValues": {
+              "block_num": 127422790,
+              "timestamp": "2026-10-13T14:58:43Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T16:03:00Z",
+              "block_num": 127431361
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-71fdfce7-771b-4cb0-81c3-030b519b01be-c000.zstd.parquet",
+          "bytes": 250809208,
+          "stats": {
+            "numRecords": 723478,
+            "minValues": {
+              "timestamp": "2026-10-13T16:03:01Z",
+              "block_num": 127431362
+            },
+            "maxValues": {
+              "block_num": 127440081,
+              "timestamp": "2026-10-13T17:08:26Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-7be72534-9464-4bd6-be88-edadc885932a-c000.zstd.parquet",
+          "bytes": 258750223,
+          "stats": {
+            "numRecords": 781274,
+            "minValues": {
+              "block_num": 127440082,
+              "timestamp": "2026-10-13T17:08:27Z"
+            },
+            "maxValues": {
+              "block_num": 127451226,
+              "timestamp": "2026-10-13T18:32:03Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-fa42f1b1-cb10-470e-a42c-e39056903d2c-c000.zstd.parquet",
+          "bytes": 254880731,
+          "stats": {
+            "numRecords": 788412,
+            "minValues": {
+              "block_num": 127451227,
+              "timestamp": "2026-10-13T18:32:03Z"
+            },
+            "maxValues": {
+              "block_num": 127465204,
+              "timestamp": "2026-10-13T20:16:54Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-fee44b8b-60e4-4a07-920e-71d09ce94c02-c000.zstd.parquet",
+          "bytes": 255045792,
+          "stats": {
+            "numRecords": 825478,
+            "minValues": {
+              "timestamp": "2026-10-13T20:16:54Z",
+              "block_num": 127465205
+            },
+            "maxValues": {
+              "timestamp": "2026-10-13T22:19:01Z",
+              "block_num": 127481485
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-13/part-00000-6859d325-84dc-4c09-b074-ab3fe80da1fb-c000.zstd.parquet",
+          "bytes": 206757469,
+          "stats": {
+            "numRecords": 685097,
+            "minValues": {
+              "timestamp": "2026-10-13T22:19:01Z",
+              "block_num": 127481486
+            },
+            "maxValues": {
+              "block_num": 127494945,
+              "timestamp": "2026-10-13T23:59:59Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-3c0aca95-b1b1-4d63-8358-bbc35ae7fce0-c000.zstd.parquet",
+          "bytes": 252800666,
+          "stats": {
+            "numRecords": 767606,
+            "minValues": {
+              "block_num": 127111629,
+              "timestamp": "2026-10-12T00:00:00Z"
+            },
+            "maxValues": {
+              "block_num": 127122899,
+              "timestamp": "2026-10-12T01:24:32Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-4ff8c5f0-b8e5-4a38-abea-d5b269c428df-c000.zstd.parquet",
+          "bytes": 255668349,
+          "stats": {
+            "numRecords": 820873,
+            "minValues": {
+              "block_num": 127122900,
+              "timestamp": "2026-10-12T01:24:32Z"
+            },
+            "maxValues": {
+              "block_num": 127134322,
+              "timestamp": "2026-10-12T02:52:12Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-4adc993f-6857-4b3a-85ee-dce62ac9c2f8-c000.zstd.parquet",
+          "bytes": 253160404,
+          "stats": {
+            "numRecords": 785434,
+            "minValues": {
+              "block_num": 127134323,
+              "timestamp": "2026-10-12T02:52:13Z"
+            },
+            "maxValues": {
+              "block_num": 127144801,
+              "timestamp": "2026-10-12T04:11:54Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-2c8b8375-37be-4815-9884-8be641f5ca85-c000.zstd.parquet",
+          "bytes": 255780018,
+          "stats": {
+            "numRecords": 795152,
+            "minValues": {
+              "timestamp": "2026-10-12T04:11:55Z",
+              "block_num": 127144802
+            },
+            "maxValues": {
+              "timestamp": "2026-10-12T05:32:23Z",
+              "block_num": 127155527
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-9c54c472-92b4-4db9-8bdb-894b93fa40b2-c000.zstd.parquet",
+          "bytes": 259301010,
+          "stats": {
+            "numRecords": 807661,
+            "minValues": {
+              "timestamp": "2026-10-12T05:32:23Z",
+              "block_num": 127155528
+            },
+            "maxValues": {
+              "timestamp": "2026-10-12T06:49:44Z",
+              "block_num": 127165837
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-00967937-7225-449d-8568-b9e3ff84bf57-c000.zstd.parquet",
+          "bytes": 252505173,
+          "stats": {
+            "numRecords": 817568,
+            "minValues": {
+              "timestamp": "2026-10-12T06:49:45Z",
+              "block_num": 127165838
+            },
+            "maxValues": {
+              "timestamp": "2026-10-12T07:50:28Z",
+              "block_num": 127173933
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-c4d289da-4090-473b-8a87-c7d9e975ccb9-c000.zstd.parquet",
+          "bytes": 257405912,
+          "stats": {
+            "numRecords": 806863,
+            "minValues": {
+              "block_num": 127173934,
+              "timestamp": "2026-10-12T07:50:29Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-12T08:55:22Z",
+              "block_num": 127182492
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-697c5b5b-1dc7-4353-a339-a64b94616d50-c000.zstd.parquet",
+          "bytes": 252096526,
+          "stats": {
+            "numRecords": 783044,
+            "minValues": {
+              "block_num": 127182493,
+              "timestamp": "2026-10-12T08:55:22Z"
+            },
+            "maxValues": {
+              "block_num": 127191215,
+              "timestamp": "2026-10-12T10:00:49Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-3ffcf389-ad26-4407-a123-87e37e063913-c000.zstd.parquet",
+          "bytes": 259886528,
+          "stats": {
+            "numRecords": 827792,
+            "minValues": {
+              "timestamp": "2026-10-12T10:00:50Z",
+              "block_num": 127191216
+            },
+            "maxValues": {
+              "block_num": 127201406,
+              "timestamp": "2026-10-12T11:17:18Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-855b1c91-a0b6-4ad0-99b0-e8e7ee990a3d-c000.zstd.parquet",
+          "bytes": 262885291,
+          "stats": {
+            "numRecords": 786241,
+            "minValues": {
+              "timestamp": "2026-10-12T11:17:18Z",
+              "block_num": 127201407
+            },
+            "maxValues": {
+              "timestamp": "2026-10-12T12:26:03Z",
+              "block_num": 127210569
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-046eaee1-d7c1-411f-a0fe-7379841cdef0-c000.zstd.parquet",
+          "bytes": 259038634,
+          "stats": {
+            "numRecords": 773202,
+            "minValues": {
+              "timestamp": "2026-10-12T12:26:03Z",
+              "block_num": 127210570
+            },
+            "maxValues": {
+              "timestamp": "2026-10-12T13:28:32Z",
+              "block_num": 127218892
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-7e4a46d8-e59e-460f-860f-cdbb1837b8ba-c000.zstd.parquet",
+          "bytes": 257908974,
+          "stats": {
+            "numRecords": 813686,
+            "minValues": {
+              "block_num": 127218893,
+              "timestamp": "2026-10-12T13:28:32Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-12T14:21:54Z",
+              "block_num": 127226002
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-22f4dd1e-465e-4e56-a160-626797d4f1fd-c000.zstd.parquet",
+          "bytes": 255292691,
+          "stats": {
+            "numRecords": 804288,
+            "minValues": {
+              "timestamp": "2026-10-12T14:21:54Z",
+              "block_num": 127226003
+            },
+            "maxValues": {
+              "block_num": 127233279,
+              "timestamp": "2026-10-12T15:16:29Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-f923c9a1-392f-4871-b47a-1a922d1ec8b6-c000.zstd.parquet",
+          "bytes": 257330156,
+          "stats": {
+            "numRecords": 786261,
+            "minValues": {
+              "block_num": 127233280,
+              "timestamp": "2026-10-12T15:16:30Z"
+            },
+            "maxValues": {
+              "block_num": 127242073,
+              "timestamp": "2026-10-12T16:22:30Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-0591d3a6-cf77-432d-8b26-07453f4dc7d6-c000.zstd.parquet",
+          "bytes": 260843916,
+          "stats": {
+            "numRecords": 800644,
+            "minValues": {
+              "timestamp": "2026-10-12T16:22:31Z",
+              "block_num": 127242074
+            },
+            "maxValues": {
+              "block_num": 127252704,
+              "timestamp": "2026-10-12T17:42:18Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-27d6f091-8f28-4b39-8630-52821e1dd324-c000.zstd.parquet",
+          "bytes": 254050848,
+          "stats": {
+            "numRecords": 821369,
+            "minValues": {
+              "block_num": 127252705,
+              "timestamp": "2026-10-12T17:42:19Z"
+            },
+            "maxValues": {
+              "block_num": 127264908,
+              "timestamp": "2026-10-12T19:13:57Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-8fa886a7-b926-47bc-8875-718e66922b96-c000.zstd.parquet",
+          "bytes": 255460775,
+          "stats": {
+            "numRecords": 770330,
+            "minValues": {
+              "timestamp": "2026-10-12T19:13:57Z",
+              "block_num": 127264909
+            },
+            "maxValues": {
+              "block_num": 127278009,
+              "timestamp": "2026-10-12T20:52:17Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-60cc0fdb-203f-4aa4-ab0c-8ea6bcce0942-c000.zstd.parquet",
+          "bytes": 252036720,
+          "stats": {
+            "numRecords": 893158,
+            "minValues": {
+              "block_num": 127278010,
+              "timestamp": "2026-10-12T20:52:17Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-12T22:36:32Z",
+              "block_num": 127291904
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-12/part-00000-9ded2cda-87dd-404a-b078-c2f6bc0ce848-c000.zstd.parquet",
+          "bytes": 214972083,
+          "stats": {
+            "numRecords": 773987,
+            "minValues": {
+              "block_num": 127291905,
+              "timestamp": "2026-10-12T22:36:32Z"
+            },
+            "maxValues": {
+              "block_num": 127303028,
+              "timestamp": "2026-10-12T23:59:59Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-001780d6-3a1a-4c85-9e1e-ad1548b2e123-c000.zstd.parquet",
+          "bytes": 259081117,
+          "stats": {
+            "numRecords": 825639,
+            "minValues": {
+              "timestamp": "2026-10-11T00:00:00Z",
+              "block_num": 126919958
+            },
+            "maxValues": {
+              "block_num": 126933312,
+              "timestamp": "2026-10-11T01:40:10Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-36527a86-8259-4f2d-a926-e2dec4ad9154-c000.zstd.parquet",
+          "bytes": 253631422,
+          "stats": {
+            "numRecords": 788067,
+            "minValues": {
+              "timestamp": "2026-10-11T01:40:10Z",
+              "block_num": 126933313
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T03:09:14Z",
+              "block_num": 126945183
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-d6fb8d43-e3ba-4060-91a7-9a2a28f1d9b2-c000.zstd.parquet",
+          "bytes": 255354673,
+          "stats": {
+            "numRecords": 798623,
+            "minValues": {
+              "block_num": 126945184,
+              "timestamp": "2026-10-11T03:09:15Z"
+            },
+            "maxValues": {
+              "block_num": 126956920,
+              "timestamp": "2026-10-11T04:37:17Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-0468d286-1bde-45b7-8749-c9a36dcf799d-c000.zstd.parquet",
+          "bytes": 257721564,
+          "stats": {
+            "numRecords": 805481,
+            "minValues": {
+              "block_num": 126956921,
+              "timestamp": "2026-10-11T04:37:18Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T06:07:37Z",
+              "block_num": 126968958
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-c918c3e1-eba1-40b7-9d8d-8fcd26bd26c0-c000.zstd.parquet",
+          "bytes": 257683420,
+          "stats": {
+            "numRecords": 850634,
+            "minValues": {
+              "block_num": 126968959,
+              "timestamp": "2026-10-11T06:07:37Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T07:32:56Z",
+              "block_num": 126980333
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-8b0ecc1f-6e3c-4e39-911c-4c2aa71db614-c000.zstd.parquet",
+          "bytes": 256851614,
+          "stats": {
+            "numRecords": 862802,
+            "minValues": {
+              "timestamp": "2026-10-11T07:32:56Z",
+              "block_num": 126980334
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T08:55:32Z",
+              "block_num": 126991347
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-075cb919-44fb-4213-81b7-b25120056004-c000.zstd.parquet",
+          "bytes": 252540487,
+          "stats": {
+            "numRecords": 853440,
+            "minValues": {
+              "block_num": 126991348,
+              "timestamp": "2026-10-11T08:55:33Z"
+            },
+            "maxValues": {
+              "block_num": 127002851,
+              "timestamp": "2026-10-11T10:21:50Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-bf2ee947-06bb-45fd-8996-ca29e38dbb7a-c000.zstd.parquet",
+          "bytes": 255756353,
+          "stats": {
+            "numRecords": 798551,
+            "minValues": {
+              "timestamp": "2026-10-11T10:21:51Z",
+              "block_num": 127002852
+            },
+            "maxValues": {
+              "block_num": 127013735,
+              "timestamp": "2026-10-11T11:43:29Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-c8c631f8-3270-4cc6-a75e-e7e2f938bf19-c000.zstd.parquet",
+          "bytes": 261840949,
+          "stats": {
+            "numRecords": 832009,
+            "minValues": {
+              "block_num": 127013736,
+              "timestamp": "2026-10-11T11:43:30Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T13:02:36Z",
+              "block_num": 127024277
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-3a8cf88e-a3d3-4e46-86d5-b98e8dac394d-c000.zstd.parquet",
+          "bytes": 254757952,
+          "stats": {
+            "numRecords": 826659,
+            "minValues": {
+              "block_num": 127024278,
+              "timestamp": "2026-10-11T13:02:37Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T14:12:44Z",
+              "block_num": 127033626
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-16ee2668-7846-46c9-93d8-5d0570c9961b-c000.zstd.parquet",
+          "bytes": 262892351,
+          "stats": {
+            "numRecords": 834170,
+            "minValues": {
+              "block_num": 127033627,
+              "timestamp": "2026-10-11T14:12:45Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T15:30:15Z",
+              "block_num": 127043960
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-2afec2f6-97ba-417f-88a7-2d7929f74a5a-c000.zstd.parquet",
+          "bytes": 259712311,
+          "stats": {
+            "numRecords": 826655,
+            "minValues": {
+              "timestamp": "2026-10-11T15:30:15Z",
+              "block_num": 127043961
+            },
+            "maxValues": {
+              "block_num": 127053511,
+              "timestamp": "2026-10-11T16:41:54Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-5ac664c1-de78-47fe-a1b1-dc8359cf8aa8-c000.zstd.parquet",
+          "bytes": 258678989,
+          "stats": {
+            "numRecords": 803757,
+            "minValues": {
+              "timestamp": "2026-10-11T16:41:54Z",
+              "block_num": 127053512
+            },
+            "maxValues": {
+              "block_num": 127063923,
+              "timestamp": "2026-10-11T18:00:01Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-16d8d13c-1429-4c24-84cc-13df4ef9a2fb-c000.zstd.parquet",
+          "bytes": 253679193,
+          "stats": {
+            "numRecords": 789725,
+            "minValues": {
+              "timestamp": "2026-10-11T18:00:01Z",
+              "block_num": 127063924
+            },
+            "maxValues": {
+              "timestamp": "2026-10-11T19:44:35Z",
+              "block_num": 127077579
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-6ac9479c-8264-4579-a694-ada08dc34996-c000.zstd.parquet",
+          "bytes": 258370537,
+          "stats": {
+            "numRecords": 751583,
+            "minValues": {
+              "timestamp": "2026-10-11T19:44:35Z",
+              "block_num": 127077580
+            },
+            "maxValues": {
+              "block_num": 127092364,
+              "timestamp": "2026-10-11T21:35:29Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-accb1028-f9b6-4e0f-aa3b-b53a0fba41ec-c000.zstd.parquet",
+          "bytes": 257242123,
+          "stats": {
+            "numRecords": 831774,
+            "minValues": {
+              "block_num": 127092365,
+              "timestamp": "2026-10-11T21:35:29Z"
+            },
+            "maxValues": {
+              "block_num": 127107128,
+              "timestamp": "2026-10-11T23:26:14Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-11/part-00000-0d89adf9-e4f9-4991-95e3-b933fe423403-c000.zstd.parquet",
+          "bytes": 96085939,
+          "stats": {
+            "numRecords": 307021,
+            "minValues": {
+              "timestamp": "2026-10-11T23:26:15Z",
+              "block_num": 127107129
+            },
+            "maxValues": {
+              "block_num": 127111628,
+              "timestamp": "2026-10-11T23:59:59Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-804cb8d2-4453-4ebe-8b78-4f3830f84de5-c000.zstd.parquet",
+          "bytes": 257241895,
+          "stats": {
+            "numRecords": 848497,
+            "minValues": {
+              "timestamp": "2026-10-10T00:00:00Z",
+              "block_num": 126728031
+            },
+            "maxValues": {
+              "block_num": 126741519,
+              "timestamp": "2026-10-10T01:41:11Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-f097c886-3727-4edf-92e8-0529050b8ff6-c000.zstd.parquet",
+          "bytes": 258599960,
+          "stats": {
+            "numRecords": 845627,
+            "minValues": {
+              "block_num": 126741520,
+              "timestamp": "2026-10-10T01:41:11Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T03:12:48Z",
+              "block_num": 126753733
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-8233282d-7aed-4cfd-a457-db971fbdfdd2-c000.zstd.parquet",
+          "bytes": 255518206,
+          "stats": {
+            "numRecords": 812079,
+            "minValues": {
+              "block_num": 126753734,
+              "timestamp": "2026-10-10T03:12:48Z"
+            },
+            "maxValues": {
+              "block_num": 126765867,
+              "timestamp": "2026-10-10T04:43:50Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-7f246cc1-3a90-46d6-9706-83b19c0b9f3f-c000.zstd.parquet",
+          "bytes": 258192254,
+          "stats": {
+            "numRecords": 840451,
+            "minValues": {
+              "block_num": 126765868,
+              "timestamp": "2026-10-10T04:43:50Z"
+            },
+            "maxValues": {
+              "block_num": 126777672,
+              "timestamp": "2026-10-10T06:12:23Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-c37da516-fbd8-4fc7-a273-ad9bbc59f8c6-c000.zstd.parquet",
+          "bytes": 260596227,
+          "stats": {
+            "numRecords": 838158,
+            "minValues": {
+              "block_num": 126777673,
+              "timestamp": "2026-10-10T06:12:24Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T07:34:40Z",
+              "block_num": 126788639
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-c5d74784-c771-47d4-9f82-07e63431d348-c000.zstd.parquet",
+          "bytes": 252054770,
+          "stats": {
+            "numRecords": 807794,
+            "minValues": {
+              "block_num": 126788640,
+              "timestamp": "2026-10-10T07:34:41Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T08:52:53Z",
+              "block_num": 126799065
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-1604e3d6-2055-4fea-b4f5-afcd60e9c2e3-c000.zstd.parquet",
+          "bytes": 262512847,
+          "stats": {
+            "numRecords": 822328,
+            "minValues": {
+              "block_num": 126799066,
+              "timestamp": "2026-10-10T08:52:53Z"
+            },
+            "maxValues": {
+              "block_num": 126809597,
+              "timestamp": "2026-10-10T10:11:54Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-6ed6632d-dc9a-4a1e-a82c-436864dea128-c000.zstd.parquet",
+          "bytes": 257213398,
+          "stats": {
+            "numRecords": 818121,
+            "minValues": {
+              "timestamp": "2026-10-10T10:11:54Z",
+              "block_num": 126809598
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T11:33:30Z",
+              "block_num": 126820476
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-659f43de-cb0d-4c27-bb65-5dd44d9a9b29-c000.zstd.parquet",
+          "bytes": 251724985,
+          "stats": {
+            "numRecords": 818313,
+            "minValues": {
+              "block_num": 126820477,
+              "timestamp": "2026-10-10T11:33:30Z"
+            },
+            "maxValues": {
+              "block_num": 126829573,
+              "timestamp": "2026-10-10T12:41:45Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-384418ae-ebbf-458e-aff5-9693b61e09f9-c000.zstd.parquet",
+          "bytes": 255970740,
+          "stats": {
+            "numRecords": 850233,
+            "minValues": {
+              "block_num": 126829574,
+              "timestamp": "2026-10-10T12:41:45Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T13:53:13Z",
+              "block_num": 126839099
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-f284ff13-8bcf-4d8b-8756-a131e214b799-c000.zstd.parquet",
+          "bytes": 257012276,
+          "stats": {
+            "numRecords": 810311,
+            "minValues": {
+              "block_num": 126839100,
+              "timestamp": "2026-10-10T13:53:14Z"
+            },
+            "maxValues": {
+              "block_num": 126848634,
+              "timestamp": "2026-10-10T15:04:46Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-53ea8c05-ebba-46ae-bc23-fec002c2e813-c000.zstd.parquet",
+          "bytes": 254013138,
+          "stats": {
+            "numRecords": 788424,
+            "minValues": {
+              "block_num": 126848635,
+              "timestamp": "2026-10-10T15:04:46Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T16:18:49Z",
+              "block_num": 126858496
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-5c90cd82-db58-4143-b129-ef2ce3a87335-c000.zstd.parquet",
+          "bytes": 262521929,
+          "stats": {
+            "numRecords": 812421,
+            "minValues": {
+              "block_num": 126858497,
+              "timestamp": "2026-10-10T16:18:50Z"
+            },
+            "maxValues": {
+              "block_num": 126870243,
+              "timestamp": "2026-10-10T17:46:59Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-515d3e3b-67b5-47c8-9b03-1a7ed4912029-c000.zstd.parquet",
+          "bytes": 262681726,
+          "stats": {
+            "numRecords": 798890,
+            "minValues": {
+              "timestamp": "2026-10-10T17:46:59Z",
+              "block_num": 126870244
+            },
+            "maxValues": {
+              "block_num": 126882185,
+              "timestamp": "2026-10-10T19:16:35Z"
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-b0da1897-7efb-4325-868e-4e97b3a48e95-c000.zstd.parquet",
+          "bytes": 261735119,
+          "stats": {
+            "numRecords": 734037,
+            "minValues": {
+              "timestamp": "2026-10-10T19:16:35Z",
+              "block_num": 126882186
+            },
+            "maxValues": {
+              "block_num": 126894453,
+              "timestamp": "2026-10-10T20:48:38Z"
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-1894508d-1583-4754-ad65-b22cdc69da98-c000.zstd.parquet",
+          "bytes": 256933198,
+          "stats": {
+            "numRecords": 819683,
+            "minValues": {
+              "block_num": 126894454,
+              "timestamp": "2026-10-10T20:48:39Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T22:50:06Z",
+              "block_num": 126910644
+            },
+            "nullCount": {
+              "block_num": 0,
+              "timestamp": 0
+            }
+          }
+        },
+        {
+          "path": "date=2026-10-10/part-00000-7231a998-7cf0-4156-aa4c-355b86abdad1-c000.zstd.parquet",
+          "bytes": 148116797,
+          "stats": {
+            "numRecords": 478536,
+            "minValues": {
+              "block_num": 126910645,
+              "timestamp": "2026-10-10T22:50:06Z"
+            },
+            "maxValues": {
+              "timestamp": "2026-10-10T23:59:59Z",
+              "block_num": 126919957
+            },
+            "nullCount": {
+              "timestamp": 0,
+              "block_num": 0
+            }
+          }
+        }
+      ]
+    }
+  }
+}

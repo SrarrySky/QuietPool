@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/SrarrySky/QuietPool#readme
+    about: Read the README and experiments/docs before opening an issue.
+  - name: Security advisory
+    url: https://github.com/SrarrySky/QuietPool/security/advisories/new
+    about: Report a vulnerability privately.

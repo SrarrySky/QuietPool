@@ -1,0 +1,32 @@
+name: Research validation
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CUDA_VISIBLE_DEVICES: ''
+      MPLBACKEND: Agg
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install --no-deps -e .
+      - run: python -m ruff check experiments
+      - run: python -m ruff format --check experiments
+      - run: python -m pytest -q
+      - run: redteam demo --output out/ci-demo
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-validation
+          path: |
+            out/ci-demo/figures
+            out/ci-demo/*.csv
+            out/ci-demo/*.json
+            out/ci-demo/REPORT.md
