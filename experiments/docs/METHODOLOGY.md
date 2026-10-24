@@ -209,6 +209,15 @@ control toward one MAR statistic while holding the other controls at their hones
 defaults. This keeps each effect attributable and directly tests whether a
 threshold-aware trader can dodge a statistic without an exhaustive search.
 
+The supplementary configuration amends the primary cohort to a
+**10-calibration / 20-test design (30 pools)**. The re-fetched historical
+snapshot (`pinax_20261024`) left four pools (`pool_15`, `pool_17`, `pool_20`,
+`pool_33`) failing the fixed eligibility rule for fewer than 72 organic swaps;
+rather than invoking the reserve-replacement stage, those four pools were dropped
+together with two pre-flagged vacancy pools (`pool_14`, `pool_24`) to preserve the
+1:2 calibration:test ratio. Calibration and indicator thresholds are recomputed
+on the retained ten calibration pools.
+
 The distinction is behavioral, not a relabeling. A **General Player** follows the
 preregistered cumulative ladder, adding controls one after another as if evasion
 were a monotonic hardening exercise. A **Top Player** reasons from the indicator

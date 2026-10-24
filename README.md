@@ -216,9 +216,10 @@ python -m experiments.analysis.supplementary --main output/pinax36 \
   --jobs 15
 ```
 
-`--sensitivities` runs the full seven-scenario grid (8 specs × 24 test pools × 7
-scenarios = 1,344 intervention paths); the configuration raises `max_runs`
-accordingly. The comparison writes three artifacts into `output/supplementary`:
+The primary grid runs **8 specs × 20 test pools = 160 intervention paths**.
+Adding `--sensitivities` runs the full seven-scenario grid (8 × 20 × 7 = 1,120
+paths); the configuration raises `max_runs` accordingly. The comparison writes
+three artifacts into `output/supplementary`:
 
 - `supplementary_alarm_comparison.csv` — per-indicator General Player (M0 and
   in-grid minimum) versus targeted Top Player alarm rates.

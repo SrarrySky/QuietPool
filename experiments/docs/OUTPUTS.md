@@ -48,7 +48,8 @@ visual encodings, definitions and limits.
 
 ## Supplementary contrast artifacts
 
-The supplementary experiment's comparison step
+The supplementary experiment runs on the amended 10-calibration / 20-test cohort
+(30 pools, primary scenario only; see `README.md`). Its comparison step
 (`python -m experiments.analysis.supplementary ...`) writes three additional
 artifacts into the supplementary output directory:
 
