@@ -36,8 +36,8 @@ def test_timing_cost_scale_keeps_single_holding_reference_visible():
                         "prediction_bps": 10.0 if indicator == "e" else np.nan,
                     }
                 )
-    fig = timing_cost_figure(pd.DataFrame(rows), {"delta_bps": 2.5})
+    fig = timing_cost_figure(pd.DataFrame(rows), {"delta_bps": 2.5}, "e", "V0")
 
     assert fig.axes[0].get_ylim()[1] > 10.0
-    assert len(fig.axes) == 4
+    assert len(fig.axes) == 1
     plt.close(fig)

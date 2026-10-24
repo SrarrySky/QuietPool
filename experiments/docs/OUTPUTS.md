@@ -46,6 +46,18 @@ See the [paper figure specification](FIGURES.md), [methodology](METHODOLOGY.md),
 [requirements coverage](REQUIREMENTS.md), and [review evidence](REVIEWS.md) for
 visual encodings, definitions and limits.
 
+## Supplementary contrast artifacts
+
+The supplementary experiment's comparison step
+(`python -m experiments.analysis.supplementary ...`) writes three additional
+artifacts into the supplementary output directory:
+
+| Artifact | Purpose |
+| --- | --- |
+| `supplementary_alarm_comparison.csv` | Per-indicator General Player (M0 and in-grid minimum) versus targeted Top Player alarm rates |
+| `supplementary_evasion_comparison.csv` | Per-indicator evasion classification contrast between the cumulative and directed grids |
+| `supplementary_report.json` | Record of ε, V*, δ and the General-vs-Top interpretation note |
+
 ## Standalone figure regeneration
 
 Figures and report-derived CSV/TeX files can be regenerated without replaying

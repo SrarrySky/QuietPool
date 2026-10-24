@@ -217,17 +217,6 @@ def pipeline_figure(synthetic):
         fontsize=7.6,
     )
     ax.text(
-        0.01,
-        0.965,
-        "Offline constrained evaluation"
-        + (" · SYNTHETIC VALIDATION" if synthetic else ""),
-        ha="left",
-        va="top",
-        fontsize=12,
-        fontweight="bold",
-        color=INK,
-    )
-    ax.text(
         0.99,
         0.965,
         "No signing · no broadcasting",

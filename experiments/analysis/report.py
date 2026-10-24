@@ -18,7 +18,8 @@ from .paper_figures import (
     alarm_heatmap_figure,
     apply_publication_style,
     attribution_figure,
-    binding_indicators_figure,
+    binding_indicators_sweep_figure,
+    binding_indicators_volume_figure,
     save_figure,
     timing_cost_figure,
 )
@@ -117,22 +118,21 @@ def report(
     figures.mkdir(exist_ok=True)
     title_suffix = " — SYNTHETIC VALIDATION" if synthetic else ""
 
-    from .pipeline import pipeline_figure
-
-    save_figure(pipeline_figure(synthetic), figures, "fig1_pipeline")
-
     main = summary[
         (summary.scenario == "primary")
         & (summary["lambda"] == cfg["lambda"])
         & (~summary.robust)
     ]
-    # Figure 2 preserves equal pool weighting and exposes coverage/target failures.
+    # Figure 1 preserves equal pool weighting and exposes coverage/target failures.
+    # Each attribution view is emitted as its own panel so the manuscript can
+    # stack them as subfigures (a) and (b).
     for pct in cfg["threshold_pcts"]:
-        save_figure(
-            alarm_heatmap_figure(main, cfg, pct, title_suffix),
-            figures,
-            f"fig2_alarm_heatmap_p{pct}",
-        )
+        for view in ("V0", "V1"):
+            save_figure(
+                alarm_heatmap_figure(main, cfg, pct, view, title_suffix),
+                figures,
+                f"fig1_alarm_heatmap_p{pct}_{view.lower()}",
+            )
     # Pool-window volume bound: use the same windows as the share statistic.
     w = windows[
         (windows.actor == "manip")
@@ -150,10 +150,22 @@ def report(
     )
     w.to_csv(output / "volume_bound_windows.csv", index=False)
     save_figure(
-        binding_indicators_figure(main, w, cfg, title_suffix),
+        binding_indicators_volume_figure(main, w, cfg, title_suffix),
         figures,
-        "fig3_binding_indicators",
+        "fig2_binding_indicators_a",
     )
+    has_m7 = main.level.astype(str).str.startswith("M7").any()
+    if has_m7:
+        for letter, metric in (
+            ("b", "p_c_sliding"),
+            ("c", "p_c_fixed"),
+            ("d", "p_d"),
+        ):
+            save_figure(
+                binding_indicators_sweep_figure(main, cfg, metric, title_suffix),
+                figures,
+                f"fig2_binding_indicators_{letter}",
+            )
     # Table 5: per-pool finite-grid minima, confidence intervals over pools.
     ev = pd.read_csv(data_root / "evasion.csv")
     classifications = []
@@ -305,11 +317,14 @@ def report(
             )
         )
     pd.DataFrame(auc_ci).to_csv(output / "h1_auc_ci.csv", index=False)
-    save_figure(
-        attribution_figure(c, auc_table, title_suffix),
-        figures,
-        "h1_attribution_distributions",
-    )
+    # Each attribution view is emitted as its own panel so the manuscript can
+    # stack them as subfigures (a) and (b).
+    for view in ("V0", "V1"):
+        save_figure(
+            attribution_figure(c, auc_table, view, title_suffix),
+            figures,
+            f"h1_attribution_distributions_{view.lower()}",
+        )
     # H3: both timing proxies, with non-finite outcomes retained explicitly.
     h3 = []
     for key, g in main.groupby(["pool", "view", "threshold_pct"]):
@@ -366,9 +381,24 @@ def report(
     h3["volatility_tercile"] = h3.pool.map(terciles)
     h3.to_csv(output / "h3_timing.csv", index=False)
     save_figure(
-        timing_cost_figure(h3, cfg, title_suffix),
+        timing_cost_figure(h3, cfg, "e", "V0", title_suffix),
         figures,
-        "h3_timing_cost",
+        "h3_timing_cost_e_v0",
+    )
+    save_figure(
+        timing_cost_figure(h3, cfg, "e", "V1", title_suffix),
+        figures,
+        "h3_timing_cost_e_v1",
+    )
+    save_figure(
+        timing_cost_figure(h3, cfg, "g2", "V0", title_suffix),
+        figures,
+        "h3_timing_cost_g2_v0",
+    )
+    save_figure(
+        timing_cost_figure(h3, cfg, "g2", "V1", title_suffix),
+        figures,
+        "h3_timing_cost_g2_v1",
     )
     # Window-level rates pooled within pools, intervals resampling only pools.
     rate_rows = []

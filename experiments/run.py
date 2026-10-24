@@ -303,7 +303,11 @@ def _run(config, output, sensitivities, budget, planned, jobs=1):
         git_commit=revision,
         python=platform.python_version(),
         protocol_sha256=sha256(config / "protocol.lock.json"),
-        m7="S1 inventory-band sweep from M5 at 10%",
+        grid=(
+            "Directed Top Player grid (one-factor-at-a-time evasion)"
+            if "specs" in ladder
+            else "Cumulative M0-M7 ladder with S1 inventory-band sweep from M5 at 10%"
+        ),
         synthetic_warning="Synthetic validation only; not paper evidence"
         if synthetic
         else None,

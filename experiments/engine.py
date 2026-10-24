@@ -58,7 +58,9 @@ def simulate(meta, swaps, blocks, cfg, ladder, spec=None, seed=42, budget=None):
     initial_quote = balances[0]
     trader = Manipulator(spec, ladder["wallets"]) if spec else None
     edges = (
-        funding_edges(trader.wallets, spec["level"] >= 4, seed, ladder["funding"])
+        funding_edges(
+            trader.wallets, spec.get("random_funding", False), seed, ladder["funding"]
+        )
         if trader
         else []
     )

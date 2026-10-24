@@ -314,7 +314,7 @@ def _audit_histories(config, output, budget):
             )
     output.mkdir(parents=True)
     pd.DataFrame(rows).to_csv(output / "qualification.csv", index=False)
-    passed = all(r["status"] == "qualified" for r in rows) and len(rows) == 36
+    passed = all(r["status"] == "qualified" for r in rows) and len(rows) == len(cfg["pools"])
     report = dict(
         qualified=passed,
         inputs=inputs,

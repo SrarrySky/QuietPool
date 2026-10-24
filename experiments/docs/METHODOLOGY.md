@@ -51,6 +51,13 @@ RiskLimitExceeded, NotDueYet, and SelfTradeRisk are non-fills, recorded with rea
 Runtime patching of only the two inventory constants implements M7 and is restored
 immediately after preview. M7 maps to S1 and branches from M5 at 10%.
 
+The same manipulator accepts a second, non-cumulative ladder encoding. When
+`ladder.yaml` carries a `specs:` list, each entry is an explicit vendor-control
+profile (`max_amount_usdt`, organic-participation cap, interval chain, wallet
+count, bundle threshold, inventory band) rather than an inherited level. This
+encoding is used by the supplementary experiment below; the cumulative M0–M7
+encoding is otherwise translated into the identical schema before execution.
+
 The original nominal inventory-recovery threshold remains active for every level.
 Therefore, M0 is not an unconditional strict-alternation policy, and widening M7's
 soft/hard bands may have little effect when another original recovery rule binds.
@@ -190,6 +197,41 @@ fixtures test mechanics only; two synthetic test pools cannot substantiate an H3
 volatility-tercile claim. Historical exclusions and endogenous organic responses,
 MEV, transfer costs, concentrated liquidity, and nonstandard token mechanics remain
 outside the current study.
+
+## Supplementary experiment: General Player vs Top Player
+
+The primary grid is cumulative: M1–M7 each add a control on top of the previous
+level, so the marginal effect of a single control is not isolated. The
+supplementary experiment replaces that ladder with a directed, one-factor-at-a-time
+grid declared under `specs:` in a separate frozen configuration. `G0` is the
+honest baseline (identical to M0); every `TP_*` spec deviates a single declared
+control toward one MAR statistic while holding the other controls at their honest
+defaults. This keeps each effect attributable and directly tests whether a
+threshold-aware trader can dodge a statistic without an exhaustive search.
+
+The distinction is behavioral, not a relabeling. A **General Player** follows the
+preregistered cumulative ladder, adding controls one after another as if evasion
+were a monotonic hardening exercise. A **Top Player** reasons from the indicator
+definition and adjusts only the knob the statistic is actually sensitive to. The
+contrast is therefore between *strategy complexity* (general) and *strategy
+targeting* (top).
+
+`TP_b` and `TP_c`/`TP_d` are deliberately antagonistic. Indicator (b) is silent
+for symmetric wash trading because positive and negative log-price increments
+cancel, but that symmetric structure exposes the net-position (c′) and reversal
+(d) statistics. A one-sided run dodges (c′)/(d) by never reversing within the
+matching window, at the cost of the accumulating price impact that (b) detects.
+No single spec can therefore silence every wash-trading statistic simultaneously;
+the grid exposes the trade-off rather than asserting a universal bypass.
+
+The comparison (`experiments/analysis/supplementary.py`) reads the completed main
+and supplementary `summary.csv` and `evasion.csv` files and writes, for each
+indicator, the General Player M0 rate, the General Player in-grid minimum, the
+targeted Top Player rate, and the Top Player in-grid minimum, together with the
+evasion-classification contrast. A Top Player rate below the general baseline, or
+a classification shift from grid-infeasible to cosmetic/feasible, is the
+operational signature of a dodge. The comparison is table-based and mints no new
+figures.
 
 ## Reproducible figure regeneration
 

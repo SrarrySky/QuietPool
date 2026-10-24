@@ -16,34 +16,111 @@ from app.compat.volume_strategy.self_trade_guard import (
     SelfTradeRisk,
 )
 
+# Explicit per-spec defaults. Each spec declares the vendor controls it deviates
+# from the honest baseline instead of stacking levels, so effects stay
+# attributable one-factor-at-a-time. Legacy cumulative ladder entries are
+# translated into this same schema below.
+_SPEC_DEFAULTS = dict(
+    name="",
+    target=None,
+    level=None,
+    max_amount_usdt=2000,
+    max_organic_volume_participation_bps=1000,
+    min_interval_sec=10,
+    base_interval_sec=30,
+    max_interval_sec=120,
+    available_wallet_count=1,
+    bundle_threshold_usdt=500,
+    guard=0,
+    band=None,
+    target_test_inventory_usd=0,
+    trend_input=False,
+    organic_input=False,
+    random_funding=False,
+)
+
+
+def _expand(spec):
+    """Return a spec dict with every explicit field defaulted in place."""
+    filled = dict(_SPEC_DEFAULTS)
+    filled.update(spec)
+    return filled
+
 
 def ladder_grid(settings):
     """Expand ladder settings into the full ordered list of strategy specs.
 
+    When "settings" carries an explicit "specs" list (the directed Top Player
+    grid), each entry is returned with defaults applied. Otherwise the legacy
+    cumulative M0--M7 ladder is expanded and translated into the same explicit
+    schema so the manipulator no longer branches on a "level" integer.
+
     Args:
-        settings: Ladder settings mapping (participation, guard, and band
-            sweeps).
+        settings: Ladder settings mapping. Either {"specs": [...]} or the
+            legacy keys "wallets", "participation_bps", "guard_seconds",
+            "inventory_bands", and "m7_definition".
 
     Returns:
-        List of spec dicts with "name", "level", "alpha", "guard", and
-        "band" keys.
+        List of explicit spec dicts.
     """
-    grid = [
-        dict(name=f"M{i}", level=i, alpha=1000, guard=0, band=None) for i in range(5)
-    ]
-    grid += [
-        dict(name=f"M5_a{a}", level=5, alpha=a, guard=0, band=None)
-        for a in settings["participation_bps"]
-    ]
-    grid += [
-        dict(name=f"M6_t{g}", level=6, alpha=1000, guard=g, band=None)
-        for g in settings["guard_seconds"]
-    ]
+    if "specs" in settings:
+        return [_expand(spec) for spec in settings["specs"]]
+
+    wallets = settings["wallets"]
+    grid = []
+    for i in range(5):
+        spec = _expand(dict(name=f"M{i}", level=i))
+        if i == 0:
+            spec.update(
+                min_interval_sec=30, base_interval_sec=30, max_interval_sec=30
+            )
+        if i >= 2:
+            spec["trend_input"] = True
+        if i >= 3:
+            spec["available_wallet_count"] = wallets
+        if i >= 4:
+            spec["random_funding"] = True
+        grid.append(spec)
+    for a in settings["participation_bps"]:
+        spec = _expand(
+            dict(
+                name=f"M5_a{a}",
+                level=5,
+                max_organic_volume_participation_bps=a,
+                trend_input=True,
+                organic_input=True,
+                available_wallet_count=wallets,
+                random_funding=True,
+            )
+        )
+        grid.append(spec)
+    for g in settings["guard_seconds"]:
+        spec = _expand(
+            dict(
+                name=f"M6_t{g}",
+                level=6,
+                guard=g,
+                trend_input=True,
+                organic_input=True,
+                available_wallet_count=wallets,
+                random_funding=True,
+            )
+        )
+        grid.append(spec)
     # M7 is S1: branch from M5 at 10%, not an additional guard on M6.
-    grid += [
-        dict(name=f"M7_i{s}_{h}", level=7, alpha=1000, guard=0, band=[s, h])
-        for s, h in settings["inventory_bands"]
-    ]
+    for s, h in settings["inventory_bands"]:
+        spec = _expand(
+            dict(
+                name=f"M7_i{s}_{h}",
+                level=7,
+                band=[s, h],
+                trend_input=True,
+                organic_input=True,
+                available_wallet_count=wallets,
+                random_funding=True,
+            )
+        )
+        grid.append(spec)
     return grid
 
 
@@ -58,16 +135,27 @@ class Manipulator:
     def __init__(self, spec, wallet_count=5):
         self.spec = spec
         self.wallets = [f"w{i}" for i in range(wallet_count)]
+        self.guard = spec.get("guard", 0)
+        self.band = spec.get("band")
+        self.trend_input = spec.get("trend_input", False)
+        self.organic_input = spec.get("organic_input", False)
+        self.available_wallet_count = min(
+            spec.get("available_wallet_count", 1), len(self.wallets)
+        )
         options = dict(
             chain="BNB",
             execution_mode="SIMULATION",
-            self_trade_window_sec=spec["guard"],
-            max_organic_volume_participation_bps=spec["alpha"],
+            self_trade_window_sec=self.guard,
+            max_organic_volume_participation_bps=spec.get(
+                "max_organic_volume_participation_bps", spec.get("alpha", 1000)
+            ),
+            min_interval_sec=spec.get("min_interval_sec", 10),
+            base_interval_sec=spec.get("base_interval_sec", 30),
+            max_interval_sec=spec.get("max_interval_sec", 120),
+            max_amount_usdt=spec.get("max_amount_usdt", 2000),
+            bundle_threshold_usdt=spec.get("bundle_threshold_usdt", 500),
+            target_test_inventory_usd=spec.get("target_test_inventory_usd", 0),
         )
-        if spec["level"] == 0:
-            options.update(
-                min_interval_sec=30, base_interval_sec=30, max_interval_sec=30
-            )
         self.config = VolumeConfig(**options)
         self.state = strategy.StrategyState()
         self.events = deque()
@@ -90,9 +178,7 @@ class Manipulator:
         """
         while self.events and self.events[0][0] <= ts - 60:
             self.events.popleft()
-        while self.orders and self.orders[0].window_ts <= ts - max(
-            1, self.spec["guard"]
-        ):
+        while self.orders and self.orders[0].window_ts <= ts - max(1, self.guard):
             self.orders.popleft()
         self.state = replace(
             self.state,
@@ -114,24 +200,24 @@ class Manipulator:
             pool_liquidity_usd=str(
                 2 * pool.reserve_quote_raw / 10**pool.quote_decimals * quote_usd
             ),
-            organic_volume_1m_usd=str(organic_volume if self.spec["level"] >= 5 else 0),
+            organic_volume_1m_usd=str(organic_volume if self.organic_input else 0),
             trend_return_bps=str(
-                float(np.clip(trend, -10000, 10000)) if self.spec["level"] >= 2 else 0
+                float(np.clip(trend, -10000, 10000)) if self.trend_input else 0
             ),
             volatility_bps=str(min(10000, volatility)),
-            available_wallet_count=len(self.wallets) if self.spec["level"] >= 3 else 1,
+            available_wallet_count=self.available_wallet_count,
             observed_at=ts,
             source="REPLAY",
         )
         try:
             with ExitStack() as stack:
-                if self.spec["band"]:
+                if self.band:
                     for name, value in zip(
                         (
                             "_V4_SOFT_INVENTORY_LIMIT_USD",
                             "_V4_HARD_INVENTORY_LIMIT_USD",
                         ),
-                        self.spec["band"],
+                        self.band,
                         strict=False,
                     ):
                         stack.enter_context(
@@ -147,9 +233,9 @@ class Manipulator:
                 float(decision.scale),
                 ts,
             )
-            if self.spec["guard"]:
+            if self.guard:
                 SelfTradeGuard.assert_no_controlled_cross(
-                    [*self.orders, order], window_seconds=self.spec["guard"]
+                    [*self.orders, order], window_seconds=self.guard
                 )
         except (
             strategy.NotDueYet,

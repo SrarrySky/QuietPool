@@ -101,12 +101,37 @@ def load_config(folder):
         )
     if frozen["initial_quote_usd"] < 0 or frozen["initial_token_usd"] < 0:
         raise ValueError("Initial endowments cannot be negative")
-    if not 1 <= ladder["wallets"] <= 5 or any(
-        not 0 < soft < hard for soft, hard in ladder["inventory_bands"]
-    ):
-        raise ValueError("Invalid wallets or inventory bands")
-    if ladder.get("m7_definition") != "S1_inventory_band_sweep_from_M5":
-        raise ValueError("M7 mapping must be explicit")
+    if not 1 <= ladder["wallets"] <= 5:
+        raise ValueError("Invalid wallets")
+    if "specs" in ladder:
+        specs = ladder["specs"]
+        if not specs or any(not s.get("name") for s in specs):
+            raise ValueError("Strategy specs must be nonempty and named")
+        if len({s["name"] for s in specs}) != len(specs):
+            raise ValueError("Strategy spec names must be unique")
+        for s in specs:
+            band = s.get("band")
+            if band is not None and (
+                not isinstance(band, (list, tuple))
+                or len(band) != 2
+                or not 0 < band[0] < band[1]
+            ):
+                raise ValueError(f"Invalid inventory band in spec {s['name']}")
+            if not 1 <= s.get("available_wallet_count", 1) <= ladder["wallets"]:
+                raise ValueError(f"Invalid available_wallet_count in spec {s['name']}")
+            if not (
+                1
+                <= s.get("min_interval_sec", 10)
+                <= s.get("base_interval_sec", 30)
+                <= s.get("max_interval_sec", 120)
+                <= 7200
+            ):
+                raise ValueError(f"Invalid interval chain in spec {s['name']}")
+    else:
+        if any(not 0 < soft < hard for soft, hard in ladder["inventory_bands"]):
+            raise ValueError("Invalid inventory bands")
+        if ladder.get("m7_definition") != "S1_inventory_band_sweep_from_M5":
+            raise ValueError("M7 mapping must be explicit")
     return frozen, ladder, pools
 
 

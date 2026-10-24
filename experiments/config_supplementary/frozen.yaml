@@ -1,0 +1,36 @@
+fee_bps: 25
+epsilon: 0.05
+delta_bps: 2.5
+lambda: 1.0
+lambda_sensitivity: [0.0, 1.0, 2.0]
+V_star_usd: 50000
+horizon_hours: 72
+window_hours: 24
+step_hours: 1
+c_min_share: 0.01
+w_c_hours: 24
+T_seconds: 600
+H_seconds: 600
+g2_seconds: 30
+v0_hops: 1
+arbitrageur: {enabled: true, band_bps: 30}
+threshold_pcts: [95, 99]
+# Funding amounts do not affect these graph-based statistics; one seed avoids
+# redundant deterministic strategy replays. Explicit multi-seed studies remain supported.
+seeds: [42]
+bootstrap_samples: 5000
+bootstrap_seed: 42
+risk_window_hours: 1
+# Physical inventory endowments are identical across directed specs.
+initial_quote_usd: 1000000
+initial_token_usd: 1000000
+
+resources:
+  # Hard ceilings, not a promise of completion. Profile calibration data first.
+  memory_mb: 46080
+  disk_mb: 65536
+  wall_seconds: 604800
+  max_runs: 1344
+  max_swaps_per_pool: 200000
+  max_blocks_per_pool: 800000
+  max_indicator_rows: 5000000

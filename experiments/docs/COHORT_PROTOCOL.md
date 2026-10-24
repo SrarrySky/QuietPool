@@ -122,6 +122,18 @@ correlation around 0.55 at alpha 0.05. Missing/infinite costs and dependence red
 that power. This is a planning approximation, not demonstrated power for H3.
 Do not claim that 36 pools by itself ensures a top-tier publication.
 
+The supplementary experiment (General Player vs Top Player) reuses the frozen
+cohort and its qualified histories, but under an amended **10-calibration /
+20-test cohort (30 pools)**. The re-fetched historical snapshot
+(`pinax_20261024`) left four pools failing the fixed eligibility rule
+(`pool_15`, `pool_17`, `pool_20`, `pool_33`, each with fewer than 72 organic
+swaps); rather than invoking the reserve-replacement stage, those four pools were
+dropped together with two pre-flagged vacancy pools (`pool_14`, `pool_24`) to
+preserve the 1:2 calibration:test ratio. It substitutes only the strategy grid in
+`ladder.yaml` with the directed `specs` grid; thresholds, calibration pools and
+the 72-hour period are otherwise unchanged. See
+[METHODOLOGY.md](METHODOLOGY.md) for the General/Top Player contrast.
+
 ## Acquisition and resource feasibility
 
 The complete active date partitions for October 10–14 total approximately

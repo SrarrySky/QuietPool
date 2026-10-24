@@ -155,6 +155,77 @@ They are not trades and do not contribute to manufactured volume. Unexplained
 Sync updates, unsupported multi-input swaps and infeasible reserve withdrawals
 still fail. The model does not infer LP behavior or reset manipulated reserves to Sync.
 
+## Supplementary experiment: General Player vs Top Player
+
+The primary grid stacks controls cumulatively (M0–M7): every later level inherits
+the earlier controls. A threshold-aware trader does not reason that way. Instead
+of adding complexity, it tunes the one or two knobs a given MAR statistic is
+actually sensitive to. The supplementary experiment answers the follow-up question
+the cumulative ladder leaves open — *given the same frozen data, can a smarter
+trader dodge the indicators by deviating one factor at a time?*
+
+It reuses the frozen historical cohort and its qualified histories, but replaces
+the cumulative `ladder.yaml` with a directed
+**Top Player grid** declared under `specs:`. Each spec starts from the honest
+baseline `G0` (the primary experiment's M0) and changes a single control toward a
+declared MAR statistic, so every effect stays one-factor-at-a-time attributable:
+
+| Spec | Target | Deviation |
+| --- | --- | --- |
+| `G0` | baseline | Honest M0 baseline |
+| `TP_a` | (a) volume share | Small absolute size and bounded organic participation |
+| `TP_b` | (b) price impact | Small symmetric round-trip (expected silent) |
+| `TP_c` | (c′) net position | One-sided nominal inventory run with a wide band |
+| `TP_d` | (d) reversal | Push reversal cadence beyond the 600 s window |
+| `TP_e` | (e) burst | Fixed uniform cadence |
+| `TP_g1` | G1 linked wallets | Single wallet, no bundle |
+| `TP_acd` | a + c′ + d | Combined evasion (trades b-impact against quietness) |
+
+`TP_b` and `TP_c`/`TP_d` pull in opposite directions: a symmetric round-trip keeps
+(b) silent while exposing (c′)/(d), whereas a one-sided run dodges (c′)/(d) at the
+cost of the price impact (b) detects. No single path silences every wash-trading
+statistic at once.
+
+### Cohort amendment
+
+The supplementary configuration was preregistered to reuse the primary
+12-calibration / 24-test cohort unchanged. The re-fetched historical snapshot
+(`pinax_20261024`) left four pools failing the fixed eligibility rule —
+`pool_15` (calibration), `pool_17`, `pool_20` and `pool_33` (test) — each with
+fewer than 72 organic swaps. The supplementary protocol was therefore amended,
+before any intervention outcome, to a **10-calibration / 20-test cohort (30
+pools)** without invoking the reserve-replacement stage. The four failed pools
+were dropped, and two further pools — `pool_14` (calibration) and `pool_24`
+(test), both pre-flagged as replacement vacancies in the primary design — were
+dropped to preserve the preregistered 1:2 calibration:test ratio. No eligibility
+threshold was relaxed and no outcome-driven exclusion was applied; the retained
+identities and splits are fixed in `config_supplementary/pools.yaml`.
+
+Freeze and run the grid, then contrast it against the completed main experiment:
+
+```bash
+# Historical qualification audit for the amended 30-pool cohort
+python -m experiments.study --config experiments/config_supplementary \
+  --output data/pinax_20261024/qualification
+
+python -m experiments.run freeze --config experiments/config_supplementary
+python -m experiments.run run --config experiments/config_supplementary \
+  --output output/supplementary --jobs 15
+python -m experiments.analysis.supplementary --main output/pinax36 \
+  --supplementary output/supplementary --config experiments/config_supplementary \
+  --jobs 15
+```
+
+`--sensitivities` runs the full seven-scenario grid (8 specs × 24 test pools × 7
+scenarios = 1,344 intervention paths); the configuration raises `max_runs`
+accordingly. The comparison writes three artifacts into `output/supplementary`:
+
+- `supplementary_alarm_comparison.csv` — per-indicator General Player (M0 and
+  in-grid minimum) versus targeted Top Player alarm rates.
+- `supplementary_evasion_comparison.csv` — per-indicator evasion classification
+  contrast between the cumulative and directed grids.
+- `supplementary_report.json` — the summary record with the ε, V* and δ settings.
+
 ## Outputs
 
 The full list of generated artifacts and their meaning is documented in
@@ -230,8 +301,9 @@ redteam run --config experiments/config --output output/pinax_$(date +%Y%m%d) --
 
 Each worker inherits the wall-time budget from the coordinator and enforces its
 own memory and row limits; the shared output disk budget remains a coordinator
-check. `--jobs` also applies to `redteam demo` and
-`python -m experiments.replacements run`.
+check. `--jobs` also applies to `redteam demo`,
+`python -m experiments.replacements run`, and
+`python -m experiments.analysis.supplementary`.
 
 Path B uses Pinax archives and optional offline quote-price CSVs; import and
 experiments make no network requests and have no RPC fallback. The public Pinax
@@ -301,14 +373,14 @@ python -u -m experiments.replacements plan \
   --work data/pinax_$(date +%Y%m%d)/replacement
 # 5c. complete: acquire data → import → supplement (deterministic-order screening)
 #     → final eligibility check → freeze protocol
-#     (~10 GiB download; default 4-hour wall clock and 32 GiB traffic cap, tune if needed)
+#     (~10 GiB download)
 python -u -m experiments.replacements complete \
   --work data/pinax_$(date +%Y%m%d)/replacement
 # 5d. run: primary experiment (360 intervention paths, up to 50-hour wall clock)
-#     --jobs 12 = 12 parallel worker processes (GIL-bound, use processes not threads;
+#     --jobs 16 = 16 parallel worker processes (GIL-bound, use processes not threads;
 #     results remain deterministic)
 python -u -m experiments.replacements run \
   --work data/pinax_$(date +%Y%m%d)/replacement \
   --output output/pinax36 \
-  --jobs 12
+  --jobs 16
 ```
