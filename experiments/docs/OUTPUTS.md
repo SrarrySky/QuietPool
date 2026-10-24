@@ -21,9 +21,8 @@ table below lists every artifact and what it records.
 | `<run>/decisions.json.gz`, `parameters.json`, `funding_edges.json` | Losslessly compressed original strategy rationale, effective settings, and funding graph |
 | `evasion.csv` | Per-pool, target-conditioned finite-grid evasion costs and maximum quiet volume |
 | `table5_classification.csv/.tex` | Empirical classifications and pool-cluster confidence intervals |
-| `figures/fig1_pipeline.*` | Experimental pipeline with separate calibration and frozen strategy |
-| `figures/fig2_alarm_heatmap_p95/p99.*` | Paper Figure 2, both views and cost annotations |
-| `figures/fig3_binding_indicators.*` | Paper Figure 3(a)/(b), volume bound and inventory sweep |
+| `figures/fig1_alarm_heatmap_p95/p99.*` | Alarm-rate matrices, both views and cost annotations |
+| `figures/fig2_binding_indicators.*` | Binding diagnostics: volume bound and inventory-band sweep |
 | `figures/h1_attribution_distributions.*`, `h1_auc.csv` | Net-position distributions and descriptive AUC |
 | `figures/h3_timing_cost.*`, `h3_timing.csv` | Timing cost, volatility, and Proposition 2 overlay where identifiable |
 | `organic_only_alert_load.csv`, `organic_only_<pool>_<scenario>.parquet` | Held-out organic-only baseline, separate from intervention paths |

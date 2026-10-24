@@ -31,12 +31,13 @@ VACANCIES = ("pool_14", "pool_15", "pool_20", "pool_24", "pool_34")
 RULE = "reserve_replacement_v1_first_eligible_fixed_order"
 
 
-def reserve_candidates(discovery, n_vacancies=len(VACANCIES)):
+def reserve_candidates(discovery, n_vacancies=None):
     """Build the fixed-order reserve candidate pool list from discovery.
 
     Args:
         discovery: Path to the discovery CSV.
-        n_vacancies: Number of reserve slots to prepare.
+        n_vacancies: Number of reserve slots to prepare (defaults to the
+            number of reserve vacancies).
 
     Returns:
         List of reserve pool dicts.
@@ -44,6 +45,8 @@ def reserve_candidates(discovery, n_vacancies=len(VACANCIES)):
     Raises:
         ValueError: If the reserve inventory is insufficient or oversized.
     """
+    if n_vacancies is None:
+        n_vacancies = len(VACANCIES)
     _, audit = select_cohort(discovery)
     reserves = [
         r

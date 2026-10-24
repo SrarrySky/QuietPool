@@ -27,22 +27,10 @@ to its source experiment.
 - A synthetic run is visibly marked `SYNTHETIC VALIDATION` and must not be used as
   paper evidence.
 
-## Figure 1 — experimental pipeline
+## Figure 1 — alarm-rate matrix
 
-Files: `figures/fig1_pipeline.pdf/.svg/.png`.
-
-The diagram separates two non-communicating paths. The calibration lane performs
-organic-only replay on calibration pools and freezes the p95/p99 thresholds. The
-test lane replays the M0–M7 strategy grid on held-out pools. Only the frozen
-thresholds enter the indicator battery. Input qualification, protocol hashing,
-resource limits, provenance and the no-sign/no-broadcast boundary are shown as
-shared controls. This is the externally generated alternative to the current
-TikZ Figure 1 in the manuscript.
-
-## Figure 2 — alarm-rate matrix
-
-Files: `figures/fig2_alarm_heatmap_p95.*` and
-`figures/fig2_alarm_heatmap_p99.*`.
+Files: `figures/fig1_alarm_heatmap_p95.*` and
+`figures/fig1_alarm_heatmap_p99.*`.
 
 The two panels show V0 public-data grouping and V1 known-control grouping. Columns
 cover all 15 M0–M7 configurations; rows cover (a), (b), (c′ sliding), (c′ fixed),
@@ -55,9 +43,9 @@ share of pools that reach the target. The view comparison for (d) must be read
 with the manuscript caveat that V0 and V1 also change the matching granularity.
 The p95 plot is primary; p99 is the preregistered threshold sensitivity.
 
-## Figure 3 — binding constraints
+## Figure 2 — binding constraints
 
-File: `figures/fig3_binding_indicators.*`.
+File: `figures/fig2_binding_indicators.*`.
 
 Panel A plots the calibrated (a) threshold against the maximum manufactured-to-
 organic volume ratio in a V1 quiet window. The dashed curve is the same-window
@@ -66,10 +54,15 @@ exists; window selection itself does not require a quiet, target-reaching full
 path.
 
 Panels B–D show the M7 inventory-band sweep for (c′ sliding), (c′ fixed) and (d).
-Each pool is a connected path from firing rate to risk `R`; marker color and shape
-identify the tested M7 band. A hollow marker denotes target failure and an `×`
-denotes an identical execution path across settings. Missing evidence remains
-absent from the path and is reported in the underlying tables, not imputed.
+Because all three alarm rates are constant at one in the completed experiment,
+the panels use the soft/hard inventory band as a categorical horizontal axis
+rather than compressing every point at the right edge of a 0–1 alarm-rate axis.
+Thin lines trace pool-specific risk `R`, small coloured points show pool summaries,
+and diamonds show the band medians. The compact header reports the alarm rate,
+quietness threshold and target coverage; exact duplicate-path counts are stated
+in the manuscript text and caption. Hollow markers are reserved for target
+failures. Missing evidence remains absent from the path and is reported in the
+underlying tables, not imputed.
 
 ## H1 — attribution distributions
 
